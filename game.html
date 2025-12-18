@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sten, Sax, Påse</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 20px;
+    }
+
+    button {
+      width: 150px;
+      height: 40px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .instructions {
+      font-size: 20px;
+      color: blue;
+    }
+
+    #choices {
+      margin-top: 20px;
+    }
+
+    #scoreDisplay p {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    #resultScreen {
+      font-size: 18px;
+      color: purple;
+    }
+
+    #restartButton {
+      background-color: #ffc107;
+      color: black;
+    }
+
+    #quitButton {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .choice {
+      background-color: #2196f3;
+      color: white;
+    }
+
+    #gameScreen {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Instructions Section -->
+  <div class="instructions">
+    <h2>Välkommen till Sten, Sax, Påse!</h2>
+    <p>Välj din drag och försök att vinna!</p>
+    <label for="winningScore">Ange vinstpoäng (1-5): </label>
+    <input type="number" id="winningScore" min="1" max="5" />
+    <button id="setScoreButton">Ställ in Vinstpoäng</button>
+  </div>
+
+  <!-- Main Game Section (Initially hidden) -->
+  <div id="gameScreen" class="game-screen hidden">
+    <div id="scoreDisplay">
+      <p id="userScore">Din Poäng: 0</p>
+      <p id="computerScore">Datorns Poäng: 0</p>
+    </div>
+    <div id="choices">
+      <button class="choice" data-choice="r">Sten</button>
+      <button class="choice" data-choice="p">Påse</button>
+      <button class="choice" data-choice="s">Sax</button>
+    </div>
+    <p id="resultText">Välj 'Sten', 'Påse', eller 'Sax' för att börja spela!</p>
+  </div>
+
+  <!-- Result Screen (Initially hidden) -->
+  <div id="resultScreen" class="hidden">
+    <p id="finalResult"></p>
+    <p id="finalScores"></p>
+    <button id="restartButton">Starta Nytt Spel</button>
+    <button id="quitButton">Avsluta Spelet</button>
+  </div>
+
+  <script>
+    let userScore = 0;
+    let computerScore = 0;
+    let winningScore = 5;
+
+    const setScoreButton = document.getElementById('setScoreButton');
+    const userScoreLabel = document.getElementById('userScore');
+    const computerScoreLabel = document.getElementById('computerScore');
+    const resultText = document.getElementById('resultText');
+    const gameScreen = document.getElementById('gameScreen');
+    const resultScreen = document.getElementById('resultScreen');
+    const finalResult = document.getElementById('finalResult');
+    const finalScores = document.getElementById('finalScores');
+    const restartButton = document.getElementById('restartButton');
+    const quitButton = document.getElementById('quitButton');
+    const winningScoreInput = document.getElementById('winningScore');
+
+    const choices = document.querySelectorAll('.choice');
+
+    // Event listener for the "Ställ in Vinstpoäng" button
+    setScoreButton.addEventListener('click', () => {
+      setWinningScore();
+    });
+
+    // Allow hitting Enter key to set the winning score
+    winningScoreInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        setWinningScore();
+      }
+    });
+
+    // Function to set the winning score
+    function setWinningScore() {
+      const scoreInput = winningScoreInput.value;
+      if (scoreInput >= 1 && scoreInput <= 5) {
+        winningScore = parseInt(scoreInput);
+        document.querySelector('.instructions').style.display = 'none';
+        gameScreen.classList.remove('hidden');
+      } else {
+        alert('Vänligen välj ett antal poäng mellan 1 och 5.');
+      }
+    }
+
+    // Event listeners for the game choices (Sten, Påse, Sax)
+    choices.forEach(choiceButton => {
+      choiceButton.addEventListener('click', (e) => {
+        playGame(e.target.dataset.choice);
+      });
+    });
+
+    restartButton.addEventListener('click', restartGame);
+    quitButton.addEventListener('click', quitGame);
+
+    // Convert choice letter to name
+    function getChoiceName(choice) {
+      if (choice === 'r') return "Sten";
+      if (choice === 'p') return "Påse";
+      if (choice === 's') return "Sax";
+      return "";
+    }
+
+    // Check for winner
+    function isWin(player, opponent) {
+      return (player === 'r' && opponent === 's') ||
+             (player === 's' && opponent === 'p') ||
+             (player === 'p' && opponent === 'r');
+    }
+
+    // Play game logic
+    function playGame(userChoice) {
+      const computerChoice = ['r', 'p', 's'][Math.floor(Math.random() * 3)];
+      const computerChoiceName = getChoiceName(computerChoice);
+
+      if (userChoice === computerChoice) {
+        resultText.textContent = `Ungefär lika! Datorn valde ${computerChoiceName}.`;
+      } else if (isWin(userChoice, computerChoice)) {
+        userScore++;
+        resultText.textContent = `Du vann! Datorn valde ${computerChoiceName}.`;
+      } else {
+        computerScore++;
+        resultText.textContent = `Du förlorade! Datorn valde ${computerChoiceName}.`;
+      }
+
+      userScoreLabel.textContent = `Din Poäng: ${userScore}`;
+      computerScoreLabel.textContent = `Datorns Poäng: ${computerScore}`;
+
+      if (userScore === winningScore) {
+        showResult("Grattis! Du har vunnit spelet!");
+      } else if (computerScore === winningScore) {
+        showResult("Datorn vann spelet!");
+      }
+    }
+
+    // Show result screen
+    function showResult(message) {
+      gameScreen.classList.add('hidden');
+      resultScreen.classList.remove('hidden');
+      finalResult.textContent = message;
+      finalScores.textContent = `Din poäng: ${userScore}\nDatorns poäng: ${computerScore}`;
+    }
+
+    // Restart the game
+    function restartGame() {
+      userScore = 0;
+      computerScore = 0;
+      userScoreLabel.textContent = `Din Poäng: ${userScore}`;
+      computerScoreLabel.textContent = `Datorns Poäng: ${computerScore}`;
+      resultText.textContent = "Välj 'Sten', 'Påse', eller 'Sax' för att börja spela!";
+      
+      resultScreen.classList.add('hidden');
+      gameScreen.classList.remove('hidden');
+    }
+
+    // Quit the game and return to the projects.html page
+    function quitGame() {
+      window.location.href = 'projects.html'; // Redirect to the projects.html page
+    }
+  </script>
+
+</body>
+</html>
+
