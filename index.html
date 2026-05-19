@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" href="css/BrowserReset.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/index.js" defer></script>
+    
 
     <link
       rel="stylesheet"
@@ -60,133 +60,81 @@
 
     <!-- knowledge section -->
     <section class="knowledge" id="knowledge">
-    <h2 class="section-h2">Tech Stack</h2>
-    <div class="knowledge-grid">      
-    </div>
-</section>
+      <h2 class="section-h2">Tech Stack</h2>
+      <div class="knowledge-grid"></div>
+    </section>
     <!-- knowledge section -->
 
     <!-- project section -->
     <section class="project" id="project">
-    <h2 class="section-h2">Projects</h2>
-    <div class="project-grid">
-      <article class="project-card">
-        <h3 class="project-h3"></h3>
-        <div class="project-img">
-          <img src="" alt="Project 1" />
-        </div>
-        <p class="project-p"></p>
-      </article>
+      <h2 class="section-h2">Projects</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3 class="project-h3"></h3>
+          <div class="project-img">
+            <img src="" alt="Project 1" />
+          </div>
+          <p class="project-p"></p>
+        </article>
 
-      <article class="project-card">
-        <h3 class="project-h3"></h3>
-        <div class="project-img">
-          <img src="" alt="Project 2" />
-        </div>
-        <p class="project-p"></p>
-      </article>
+        <article class="project-card">
+          <h3 class="project-h3"></h3>
+          <div class="project-img">
+            <img src="" alt="Project 2" />
+          </div>
+          <p class="project-p"></p>
+        </article>
 
-      <article class="project-card">
-        <h3 class="project-h3"></h3>
-        <div class="project-img">
-          <img src="" alt="Project 3" />
-        </div>
-        <p class="project-p"></p>
-      </article>
+        <article class="project-card">
+          <h3 class="project-h3"></h3>
+          <div class="project-img">
+            <img src="" alt="Project 3" />
+          </div>
+          <p class="project-p"></p>
+        </article>
 
-      <article class="project-card">
-        <h3 class="project-h3"></h3>
-        <div class="project-img">
-          <img src="" alt="Project 4" />
-        </div>
-        <p class="project-p"></p>
-      </article>
+        <article class="project-card">
+          <h3 class="project-h3"></h3>
+          <div class="project-img">
+            <img src="" alt="Project 4" />
+          </div>
+          <p class="project-p"></p>
+        </article>
 
-      <article class="project-card">
-        <h3 class="project-h3"></h3>
-        <div class="project-img">
-          <img src="" alt="Project 5" />
-        </div>
-        <p class="project-p"></p>
-      </article>
+        <article class="project-card">
+          <h3 class="project-h3"></h3>
+          <div class="project-img">
+            <img src="" alt="Project 5" />
+          </div>
+          <p class="project-p"></p>
+        </article>
 
-      <article class="project-card">
-        <h3 class="project-h3"></h3>
-        <div class="project-img">
-          <img src="" alt="Project 6" />
-        </div>
-        <p class="project-p"></p>
-      </article>
-</section>
+        <article class="project-card">
+          <h3 class="project-h3"></h3>
+          <div class="project-img">
+            <img src="" alt="Project 6" />
+          </div>
+          <p class="project-p"></p>
+        </article>
+      </div>
+    </section>
 
     <!-- project section -->
 
     <!-- references section -->
-    <section class="references" id="references ">
-
-    </section>
+    <section class="references" id="references "></section>
     <!-- references section -->
 
-   
-
     <!-- contact section -->
-    <section class="newsletter" id="newsletter">
-      <h2 class="section-h2">Join the Ravenfjord Watch</h2>
-      <p class="newsletter-p">
-        Receive rare sightings, creature updates, and travel warnings from the
-        northern realm.
-      </p>
+    <section class="contact" id="contact">
+      <h2 class="section-h2">Send Email</h2>
+      <p class="newsletter-p"></p>
 
-      <form
-        class="newsletter-form"
-        action="https://formsubmit.co/57d09a3776aed8a5a4bc8f5f60aca15b"
-        method="POST"
-      >
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table" />
-
-        <label for="firstName">First Name</label>
-        <input
-          type="text"
-          id="firstName"
-          name="Förnamn"
-          required
-          minlength="2"
-          pattern="[A-Za-zÅÄÖåäö\- ]+"
-          placeholder="First Name"
-        />
-
-        <label for="lastName">Last Name</label>
-        <input
-          type="text"
-          id="lastName"
-          name="Efternamn"
-          required
-          minlength="2"
-          pattern="[A-Za-zÅÄÖåäö\- ]+"
-          placeholder="Last Name"
-        />
-
-        <label for="email">Age</label>
-        <input
-          type="number"
-          placeholder="Age"
-          name="age"
-          min="18"
-          max="100"
-          required
-        />
-
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="E-post"
-          required
-          pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
-          placeholder="name@example.com"
-        />
-        <button type="submit">Subscribe</button>
+      <form class="contact-form" method="POST">
+        <input type="text" name="name" required />
+        <input type="email" name="email" required />
+        <textarea name="message" required></textarea>
+        <button type="submit">Submit Form</button>
       </form>
     </section>
     <!-- contact section -->
@@ -196,9 +144,7 @@
       <div class="footer-content">
         <h3 class="footer-logo">DB</h3>
 
-        <p class="footer-text">
-
-        </p>
+        <p class="footer-text"></p>
 
         <div class="footer-social">
           <a
@@ -217,5 +163,7 @@
       </div>
     </footer>
     <!-- footer section -->
+    <script src="js/config.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
