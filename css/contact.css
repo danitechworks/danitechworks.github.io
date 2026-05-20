@@ -37,7 +37,8 @@
 .contact-form input {
   padding: 12px 20px;
   border-radius: 8px;
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   box-sizing: border-box;
 }
 
@@ -47,7 +48,8 @@
 }
 
 .contact-form textarea {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   padding: 10px;
   margin-bottom: 15px;
 
@@ -66,7 +68,8 @@
   background-color: var(--bg);
   color: var(--text);
   border: 1px solid var(--accent);
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
 
   padding: 10px 40px;
 
