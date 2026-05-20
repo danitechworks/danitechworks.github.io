@@ -11,6 +11,10 @@ body {
   background-color: var(--bg);
 }
 
+section {
+  padding: 0 1rem;
+}
+
 .section-h2 {
   color: var(--text);
   font-size: 3rem;
