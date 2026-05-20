@@ -1,0 +1,14 @@
+.hero-div {
+  background-image: url("../images/laptop.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+@media (max-width: 600px) {
+  .hero-div {
+    width: 90%;
+    height: auto;
+  }
+}
