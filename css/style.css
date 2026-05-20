@@ -10,3 +10,9 @@
 body {
   background-color: var(--bg);
 }
+
+.section-h2 {
+  color: var(--text);
+  font-size: 3rem;
+  text-align: center;
+}
