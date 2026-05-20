@@ -7,8 +7,15 @@
   --shadow: dark rgb(19, 17, 17);
 }
 
+:root {
+  --font-main: "Lato", sans-serif;
+  --font-heading: "Poppins", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
 body {
   background-color: var(--bg);
+  font-family: var(--font-main);
 }
 
 section {
@@ -20,4 +27,5 @@ section {
   font-size: 3rem;
   text-align: center;
   margin: 1rem;
+  font-family: var(--font-heading);
 }

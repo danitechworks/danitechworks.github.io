@@ -7,14 +7,12 @@
 }
 
 .footer-logo {
-  font-family: "MedievalSharp", serif;
   font-size: 2rem;
   color: var(--accent);
   margin-bottom: 10px;
 }
 
 .footer-text {
-  font-family: "Lato", sans-serif;
   font-size: 1rem;
   max-width: 600px;
   margin: 0 auto 10px;
