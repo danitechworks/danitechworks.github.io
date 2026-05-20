@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/projects.css" />
     <link rel="stylesheet" href="css/aboutme.css" />
     <link rel="stylesheet" href="css/references.css" />
+    <link rel="stylesheet" href="css/contact.css" />
 
     <link
       rel="stylesheet"
@@ -156,15 +157,41 @@
           <div class="references-img">
             <img src="" alt="ref" />
           </div>
-          <h3 class="references-h3">Name</h3>
-          <p class="references-p">reference here</p>
+          <h3 class="references-h3">Richard H</h3>
+          <p class="references-p">
+            When placed in a situation where she needed to learn a new system
+            quickly, she was able to achieve this and to immediately take charge
+            and run the offices on her own. Dannell is a delight to work with
+            and I wouldn’t hesitate to hire her again.
+          </p>
+
+          <a
+            href="pdffiles/DannellBayer-richardRefLetter.pdf"
+            target="_blank"
+            class="ref-btn"
+          >
+            View full reference
+          </a>
         </article>
         <article class="references-card">
           <div class="references-img">
             <img src="" alt="ref" />
           </div>
-          <h3 class="references-h3">Name</h3>
-          <p class="references-p">reference here</p>
+          <h3 class="references-h3">Najmaddin M</h3>
+          <p class="references-p">
+            Genom sin nyfikenhet, problemlösningsförmåga och vilja att ständigt
+            utvecklas har Dannell varit en mycket värdefull medlem i
+            projektgruppen. Hon har snabbt blivit en inspiration för kollegor
+            och ett föredöme när det gäller självledarskap och professionell
+            utveckling.
+          </p>
+          <a
+            href="pdffiles/DannellBayer-najmaddinRefLetter.pdf"
+            target="_blank"
+            class="ref-btn"
+          >
+            View full reference
+          </a>
         </article>
       </div>
     </section>
@@ -172,15 +199,18 @@
 
     <!-- contact section -->
     <section class="contact" id="contact">
-      <h2 class="section-h2">Send Email</h2>
-      <p class="newsletter-p"></p>
+      <div class="contact-layout">
+        <h2 class="section-h2">Send Email</h2>
+        <p class="newsletter-p"></p>
 
-      <form class="contact-form" method="POST">
-        <input type="text" name="name" required />
-        <input type="email" name="email" required />
-        <textarea name="message" required></textarea>
-        <button type="submit">Submit Form</button>
-      </form>
+        <form class="contact-form" method="POST">
+          <input type="text" name="name" required />
+          <input type="email" name="email" required />
+          <textarea name="message" required></textarea>
+          <button type="submit">Submit Form</button>
+        </form>
+        <div class="weather-div"><p class="weather-p">weather here</p></div>
+      </div>
     </section>
     <!-- contact section -->
 
@@ -210,17 +240,6 @@
     </footer>
     <!-- footer section -->
     <script src="js/config.js"></script>
-    <script>
-      document.querySelectorAll(".projects-card").forEach((card) => {
-        const video = card.querySelector(".hover-video");
-        if (video) {
-          card.addEventListener("mouseenter", () => video.play());
-          card.addEventListener("mouseleave", () => {
-            video.pause();
-            video.currentTime = 0;
-          });
-        }
-      });
-    </script>
+    <script src="js/index.js"></script>
   </body>
 </html>

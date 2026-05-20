@@ -66,3 +66,23 @@
   );
   pointer-events: none;
 }
+
+.ref-btn {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-decoration: none;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.references-card:hover .ref-btn {
+  opacity: 1;
+}

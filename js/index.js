@@ -1,3 +1,17 @@
+document.querySelectorAll('.projects-card').forEach(card => {
+  const video = card.querySelector('.hover-video');
+  if (video) {
+    video.load();
+    card.addEventListener('mouseenter', () => {
+      video.play().catch(e => console.log('Play error:', e));
+    });
+    card.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  }
+});
+
 if (!window.WEB3FORMS_KEY) {
   alert('Config not loaded! Add your key to js/config.js');
 } else {
