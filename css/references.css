@@ -1,4 +1,4 @@
-.projects-grid {
+.references-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-.projects-card {
+.references-card {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
@@ -18,19 +18,19 @@
   border: 1px solid rgba(52, 54, 55, 0.2);
 }
 
-.projects-card:hover {
+.references-card:hover {
   transform: translateY(-4px);
   transition: 0.2s ease;
   border-color: var(--accent);
 }
 
-.projects-h3 {
+.references-h3 {
   font-size: 1rem;
   color: var(--text);
   text-align: center;
 }
 
-.projects-p {
+.references-p {
   font-size: 0.9rem;
   color: var(--text);
   padding: 5px 10px 5px 10px;
@@ -65,20 +65,4 @@
     rgba(221, 221, 223, 0.6) 94%
   );
   pointer-events: none;
-}
-
-.hover-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.projects-card:hover .hover-video {
-  opacity: 1;
 }

@@ -8,6 +8,7 @@
   background-color: var(--divbg);
   border-radius: 32px;
   backdrop-filter: blur(6px);
+  margin: 1rem;
 }
 
 .about-h3 {
