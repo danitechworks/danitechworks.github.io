@@ -1,8 +1,10 @@
 :root {
   --bg: #0f172a;
   --card: #111827;
-  --text: #e5e7eb;
+  --text: #2052b6;
   --accent: #38bdf8;
+  --divbg: rgb(185, 178, 178);
+  --shadow: dark rgb(19, 17, 17);
 }
 
 body {
