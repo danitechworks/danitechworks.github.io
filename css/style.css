@@ -15,4 +15,5 @@ body {
   color: var(--text);
   font-size: 3rem;
   text-align: center;
+  margin: 1rem;
 }

@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/knowledge.css" />
     <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/aboutme.css" />
 
     <link
       rel="stylesheet"
@@ -40,6 +41,7 @@
           <li><a href="#hero">Home</a></li>
           <li><a href="#knowledge">Tech Stack</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About Me</a></li>
           <li><a href="#references">References</a></li>
           <li><a href="#contact">Contact</a></li>
           <li>
@@ -135,6 +137,16 @@
 
     <!-- project section -->
 
+    <!-- about me section -->
+    <section class="about" id="about">
+      <h2 class="section-h2">About Me</h2>
+      <div class="about-div">
+        <h3 class="about-h3">Hi!</h3>
+        <p class="about-p">info here</p>
+      </div>
+    </section>
+    <!-- about me section -->
+
     <!-- references section -->
     <section class="references" id="references "></section>
     <!-- references section -->
@@ -180,11 +192,11 @@
     <!-- footer section -->
     <script src="js/config.js"></script>
     <script>
-      document.querySelectorAll('.projects-card').forEach(card => {
-        const video = card.querySelector('.hover-video');
+      document.querySelectorAll(".projects-card").forEach((card) => {
+        const video = card.querySelector(".hover-video");
         if (video) {
-          card.addEventListener('mouseenter', () => video.play());
-          card.addEventListener('mouseleave', () => {
+          card.addEventListener("mouseenter", () => video.play());
+          card.addEventListener("mouseleave", () => {
             video.pause();
             video.currentTime = 0;
           });
