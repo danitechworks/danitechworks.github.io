@@ -1,0 +1,26 @@
+.knowledge-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.skill {
+  background-color: var(--divbg);
+  color: var(--text);
+  font-size: 1rem;
+
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+
+  backdrop-filter: blur(4px);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.skill:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
