@@ -12,7 +12,10 @@
 .references-card {
   position: relative;
   border-radius: 15px;
-  overflow: hidden;
+
+  padding-right: 8px;
+  padding-left: 16px;
+  padding-bottom: 8px;
 
   background: radial-gradient(
     circle at center,
@@ -30,25 +33,32 @@
 }
 
 .references-h3 {
-  font-size: 1rem;
   color: var(--text);
   text-align: center;
+  font-size: 2rem;
+  color: #59fdfc;
+  text-shadow: 0px 4px 12px #59fdfc;
 }
 
 .references-p {
-  font-size: 0.9rem;
-  color: var(--text);
+  color: #cbd5e1;
+  text-align: left;
+  margin: 0;
+
+  padding-bottom: 8px;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
   padding: 5px 10px 5px 10px;
 }
 
-.projects-card img {
+/* .references-card img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 15px;
 }
 
-.projects-img {
+.references-img {
   position: relative;
   position: relative;
   width: 100%;
@@ -56,7 +66,7 @@
   overflow: hidden;
 }
 
-.projects-img::after {
+.references-img::after {
   content: "";
   position: absolute;
   top: 0;
@@ -70,7 +80,7 @@
     rgba(221, 221, 223, 0.6) 94%
   );
   pointer-events: none;
-}
+} */
 
 .ref-btn {
   position: absolute;
@@ -80,9 +90,14 @@
   align-items: center;
   justify-content: center;
 
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
+  background: rgba(0, 0, 0, 0.75);
+
+  color: #ffffff;
   text-decoration: none;
+
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -90,4 +105,5 @@
 
 .references-card:hover .ref-btn {
   opacity: 1;
+  color: var(--accent);
 }
