@@ -57,7 +57,7 @@
   pointer-events: none;
 }
 
-.weather-card {
+.weatherCard {
   margin-top: 2rem;
   background: linear-gradient(180deg, rgb(76, 211, 235), rgb(221, 186, 120));
   padding: 50px;
