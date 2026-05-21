@@ -38,10 +38,49 @@ async function getWeatherData(city) {
 
   const response = await fetch(apiUrl);
 
-  console.log(response);
+  if (!response.ok) {
+    throw new Error("Could not fetch weather data");
+  }
+
+  return await response.json();
 }
 
-function displayWeatherInfo(data) {}
+function displayWeatherInfo(data) {
+  const {
+    name: city,
+    main: { temp, humidity },
+    weather: [{ description, id }],
+  } = data;
+  card.textContent = "";
+  card.style.display = "flex";
+
+  const cityDisplay = document.createElement("h3");
+  const tempDisplay = document.createElement("p");
+  const humidityDisplay = document.createElement("p");
+  const descDisplay = document.createElement("p");
+  const weatherEmoji = document.createElement("p");
+
+  cityDisplay.textContent = city;
+  cityDisplay.classList.add("cityDisplay");
+
+  tempDisplay.textContent = `${temp}°C`;
+  tempDisplay.classList.add("tempDisplay");
+
+  humidityDisplay.textContent = `Humidity: ${humidity}%`;
+  humidityDisplay.classList.add("humidityDisplay");
+
+  descDisplay.textContent = description;
+  descDisplay.classList.add("descDisplay");
+
+  weatherEmoji.textContent = getWeatherEmoji(id);
+  weatherEmoji.classList.add("emojiDisplay");
+
+  card.appendChild(cityDisplay);
+  card.appendChild(tempDisplay);
+  card.appendChild(humidityDisplay);
+  card.appendChild(descDisplay);
+  card.appendChild(weatherEmoji);
+}
 
 function getWeatherEmoji(weatherId) {}
 
