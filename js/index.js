@@ -43,7 +43,7 @@ if (!window.WEB3FORMS_KEY) {
 
 const weatherForm = document.querySelector(".weatherForm");
 const cityInput = document.querySelector(".cityInput");
-const card = document.querySelector(".weather-card");
+const card = document.querySelector(".weatherCard");
 
 weatherForm.addEventListener("submit", (event) => {
   event.preventDefault();
