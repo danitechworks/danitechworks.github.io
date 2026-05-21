@@ -1,3 +1,12 @@
+.contact {
+  background-image: url("../images/backgroundR.jpg");
+  position: relative;
+  background-size: auto 500px;
+  background-position: right;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
 .contact-layout {
   display: grid;
   align-self: center;
