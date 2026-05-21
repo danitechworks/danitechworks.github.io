@@ -15,8 +15,7 @@
   row-gap: 10px;
   column-gap: 30px;
   align-items: start;
-  max-width: 970px;
-  margin: 0 auto;
+  margin: 0 2rem;
   padding: 20px;
   background-color: var(--divbg);
   border-radius: 32px;

@@ -4,7 +4,6 @@
   --text: white;
   --accent: #59fdfc;
   --divbg: rgb(185, 178, 178);
-  --shadow: dark rgb(19, 17, 17);
 }
 
 :root {
@@ -20,7 +19,11 @@ body {
 
 section {
   margin: 0;
-  padding: 0 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5;
+  padding-right: 2rem;
+  padding-left: 2rem;
+
   position: relative;
   background-color: var(--bg);
   font-family: var(--font-mono);

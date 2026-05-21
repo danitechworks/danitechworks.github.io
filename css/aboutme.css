@@ -1,7 +1,10 @@
 .about-div {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0 2rem;
+  justify-content: center;
+  padding: 0 32px;
+  box-sizing: border-box;
   background-color: var(--divbg);
   border-radius: 32px;
   backdrop-filter: blur(6px);
