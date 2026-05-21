@@ -23,6 +23,7 @@ section {
   padding: 0 1rem;
   position: relative;
   background-color: var(--bg);
+  font-family: var(--font-mono);
 }
 
 /* .section-gradient::before,
@@ -65,6 +66,6 @@ section {
   text-align: center;
   margin: 0;
   padding: 1rem 0;
-  font-family: var(--font-heading);
+  font-family: var(--font-mono);
   text-shadow: 0px 4px 8px #59fdfc;
 }
