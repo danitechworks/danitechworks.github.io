@@ -15,18 +15,31 @@ document.querySelectorAll(".projects-card").forEach((card) => {
 const weatherForm = document.querySelector(".weatherForm");
 const cityInput = document.querySelector(".cityInput");
 const card = document.querySelector(".weatherCard");
-const apiKKey = "735aafa53526ebaad3622866aa203515";
+const apiKey = "735aafa53526ebaad3622866aa203515";
 
-weatherForm.addEventListener("submit", (event) => {
+weatherForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const city = cityInput.value;
   if (city) {
+    try {
+      const weatherData = await getWeatherData(city);
+      displayWeatherInfo(weatherData);
+    } catch (error) {
+      console.error(error);
+      displayError(error);
+    }
   } else {
     displayError("Please enter a city");
   }
 });
 
-async function getWeatherData(city) {}
+async function getWeatherData(city) {
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  const response = await fetch(apiUrl);
+
+  console.log(response);
+}
 
 function displayWeatherInfo(data) {}
 
