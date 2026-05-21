@@ -1,2 +1,0 @@
-window.WEB3FORMS_KEY = "206e0ad1-7365-426f-9754-2d26ab187201";
-const apiKey = "735aafa53526ebaad3622866aa203515";
