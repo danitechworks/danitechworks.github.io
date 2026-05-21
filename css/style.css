@@ -1,8 +1,8 @@
 :root {
-  --bg: #0f172a;
+  --bg: #000200;
   --card: #111827;
-  --text: #2052b6;
-  --accent: #38bdf8;
+  --text: white;
+  --accent: #59fdfc;
   --divbg: rgb(185, 178, 178);
   --shadow: dark rgb(19, 17, 17);
 }
@@ -22,6 +22,7 @@ section {
   margin: 0;
   padding: 0 1rem;
   position: relative;
+  background-color: var(--bg);
 }
 
 /* .section-gradient::before,

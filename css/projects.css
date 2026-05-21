@@ -1,9 +1,18 @@
+.projects {
+  background-image: url("../images/backgroundL.jpg");
+  position: relative;
+  background-size: auto 600px;
+  background-position: left;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   max-width: calc(3 * 310px * 30px);
-  margin: 0 auto;
+  margin: 1rem;
   justify-content: center;
   padding: 0 10px;
   box-sizing: border-box;

@@ -1,4 +1,5 @@
 .hero {
+  background-image: url("../images/background3.jpg");
   position: relative;
   display: flex;
   justify-content: center;
@@ -15,7 +16,6 @@
   position: fixed;
   inset: 0;
 
-  background-image: url("../images/background.png");
   background-size: cover;
   background-position: center;
 
@@ -90,7 +90,7 @@
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(255, 255, 255, 0.8) 100%
+    rgba(14, 3, 3, 0.8) 100%
   );
 
   pointer-events: none;
