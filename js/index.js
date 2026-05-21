@@ -49,7 +49,7 @@ function displayWeatherInfo(data) {
   const {
     name: city,
     main: { temp, humidity },
-    weather: [{ description, id }],
+    weather: [{ description, icon }],
   } = data;
   card.textContent = "";
   card.style.display = "flex";
@@ -58,7 +58,7 @@ function displayWeatherInfo(data) {
   const tempDisplay = document.createElement("p");
   const humidityDisplay = document.createElement("p");
   const descDisplay = document.createElement("p");
-  const weatherEmoji = document.createElement("p");
+  const iconDisplay = document.createElement("img");
 
   cityDisplay.textContent = city;
   cityDisplay.classList.add("cityDisplay");
@@ -72,17 +72,20 @@ function displayWeatherInfo(data) {
   descDisplay.textContent = description;
   descDisplay.classList.add("descDisplay");
 
-  weatherEmoji.textContent = getWeatherEmoji(id);
-  weatherEmoji.classList.add("emojiDisplay");
+  iconDisplay.src = getWeatherEmoji(icon);
+  iconDisplay.alt = description;
+  iconDisplay.classList.add("iconDisply");
 
   card.appendChild(cityDisplay);
   card.appendChild(tempDisplay);
   card.appendChild(humidityDisplay);
   card.appendChild(descDisplay);
-  card.appendChild(weatherEmoji);
+  card.appendChild(iconDisplay);
 }
 
-function getWeatherEmoji(weatherId) {}
+function getWeatherEmoji(weatherIcon) {
+  return `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
+}
 
 function displayError(message) {
   const errorDisplay = document.createElement("p");
