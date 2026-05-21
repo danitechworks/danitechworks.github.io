@@ -87,7 +87,8 @@
   text-shadow: 0px 4px 12px black;
   font-family: var(--font-mono);
   font-weight: 900;
-  letter-spacing: 2px;
+  letter-spacing: 18px;
+  line-height: 100%;
 }
 
 .hero-p {
@@ -213,5 +214,10 @@
     transform: none;
     bottom: 0;
     top: auto;
+    background: radial-gradient(
+      circle at center,
+      transparent 50%,
+      #000200(221, 221, 223, 0.6) 94%
+    );
   }
 }

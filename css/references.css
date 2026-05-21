@@ -13,15 +13,20 @@
   position: relative;
   border-radius: 15px;
   overflow: hidden;
-  background: var(--divbg);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(52, 54, 55, 0.2);
-}
 
-.references-card:hover {
-  transform: translateY(-4px);
-  transition: 0.2s ease;
-  border-color: var(--accent);
+  background: radial-gradient(
+    circle at center,
+    rgba(89, 253, 252, 0.15) 0%,
+    rgba(89, 253, 252, 0.05) 40%,
+    rgba(15, 23, 42, 0.8) 100%
+  );
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(89, 253, 252, 0.15);
+
+  box-shadow: 0 0 30px rgba(89, 253, 252, 0.08);
+
+  border-radius: 32px;
 }
 
 .references-h3 {
