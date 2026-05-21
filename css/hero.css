@@ -1,15 +1,12 @@
 .hero {
   background-image: url("../images/background3.jpg");
   position: relative;
-  display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
   overflow: hidden;
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 .hero::before {
@@ -25,7 +22,6 @@
 
 .hero-layout {
   display: grid;
-  align-self: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
   row-gap: 10px;
@@ -34,7 +30,6 @@
   max-width: 970px;
   margin: 0 auto;
   padding: 20px;
-  background-color: var(--divbg);
   border-radius: 32px;
 }
 
@@ -76,7 +71,6 @@
 .hero-btn {
   display: inline-block;
   text-decoration: none;
-  align-text: center;
   background-color: var(--bg);
   color: #ccd5d9;
   border: 1px solid var(--accent);
