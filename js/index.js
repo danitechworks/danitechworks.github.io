@@ -15,6 +15,7 @@ document.querySelectorAll(".projects-card").forEach((card) => {
 const weatherForm = document.querySelector(".weatherForm");
 const cityInput = document.querySelector(".cityInput");
 const card = document.querySelector(".weatherCard");
+const apiKKey = "735aafa53526ebaad3622866aa203515";
 
 weatherForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -35,6 +36,7 @@ function displayError(message) {
   const errorDisplay = document.createElement("p");
   errorDisplay.textContent = message;
   errorDisplay.classList.add("errorDisplay");
-  weatherCard.textContent = "";
-  weatherCard.style.display = "flex";
+  card.textContent = "";
+  card.style.display = "flex";
+  card.appendChild(errorDisplay);
 }

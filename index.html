@@ -203,7 +203,11 @@
     <section class="contact" id="contact">
       <h2 class="section-h2">Contact Me</h2>
       <div class="contact-layout">
-        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <form
+          class="contact-form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
           <h3 class="contact-h3">Send Email</h3>
 
           <label for="name">Name</label>
@@ -232,8 +236,16 @@
             required
           ></textarea>
 
-          <input type="hidden" name="access_key" value="206e0ad1-7365-426f-9754-2d26ab187201" />
-          <input type="hidden" name="subject" value="New Contact Form Submission" />
+          <input
+            type="hidden"
+            name="access_key"
+            value="206e0ad1-7365-426f-9754-2d26ab187201"
+          />
+          <input
+            type="hidden"
+            name="subject"
+            value="New Contact Form Submission"
+          />
           <button type="submit" class="contact-form-button">Submit Form</button>
         </form>
         <div class="weather-div">
@@ -246,14 +258,7 @@
                 Get Weather
               </button>
             </form>
-            <div class="weatherCard" style="display: none">
-              <!-- <h2 class="cityDisplay">Stockholm</h2>
-              <p class="tempDisplay">90 degrees</p>
-              <p class="humidityDisplay">Humidy: 90%</p>
-              <p class="descDisplay">Clear Skies</p>
-              <p class="weatherEmoji">😍🌞</p>
-              <p class="errorDisplay">Please enter a city</p> -->
-            </div>
+            <div class="weatherCard"></div>
           </div>
           <div class="weather-img">Weather image here</div>
         </div>
@@ -286,6 +291,6 @@
       </div>
     </footer>
     <!-- footer section -->
-
+    <script src="js/index.js"></script>
   </body>
 </html>
