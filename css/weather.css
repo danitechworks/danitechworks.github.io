@@ -1,7 +1,24 @@
-.weatherForm {
+.weather-h3 {
+  color: var(--accent);
+  text-align: left;
+  font-size: 2rem;
+  line-height: 1.6;
 }
 
+.weatherForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.weatherForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  color: #cbd5e1;
+}
 .cityInput {
+  font-size: 1rem;
   padding: 12px 20px;
   border-radius: 8px;
   width: 100%;

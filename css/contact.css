@@ -17,14 +17,32 @@
   align-items: start;
   margin: 0 2rem;
   padding: 20px;
-  background-color: var(--divbg);
+  position: relative;
+  border-radius: 15px;
+
+  padding-right: 8px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(89, 253, 252, 0.15) 0%,
+    rgba(89, 253, 252, 0.05) 40%,
+    rgba(15, 23, 42, 0.8) 100%
+  );
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(89, 253, 252, 0.15);
+
+  box-shadow: 0 0 30px rgba(89, 253, 252, 0.08);
+
   border-radius: 32px;
 }
 
 .contact-h3 {
-  color: var(--text);
+  color: var(--accent);
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.6;
 }
 
@@ -38,11 +56,12 @@
 .contact-form label {
   display: block;
   margin-bottom: 5px;
-  color: var(--text);
-  font-size: 0.95rem;
+  font-size: 1.5rem;
+  color: #cbd5e1;
 }
 
 .contact-form input {
+  font-size: 1rem;
   padding: 12px 20px;
   border-radius: 8px;
   width: 100%;
@@ -122,8 +141,9 @@
 }
 
 .weather-h3 {
-  color: var(--text);
-  font-size: 1.5rem;
+  color: var(--accent);
+  text-align: left;
+  font-size: 2rem;
   line-height: 1.6;
 }
 
