@@ -21,8 +21,8 @@ section {
   margin: 0;
   padding-top: 1rem;
   padding-bottom: 0.5;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
 
   position: relative;
   background-color: var(--bg);
