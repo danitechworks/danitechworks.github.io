@@ -59,13 +59,23 @@
 
 @media (max-width: 768px) {
   .navbar {
+    position: sticky;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 10px 20px;
+    row-gap: 10px;
   }
 
   .nav-links {
+    flex: 1 1 100%;
     gap: 10px;
     font-size: 0.85rem;
-    width: 100%;
-    justify-content: space-around;
+    width: auto;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .cv-btn {
+    margin-right: 0;
   }
 }
