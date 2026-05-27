@@ -1,5 +1,5 @@
 :root {
-  --bg: #000200;
+  --bg: #02090d;
   --card: #111827;
   --text: #cbd5e1;
   --accent: #59fdfc;
@@ -7,8 +7,8 @@
 }
 
 :root {
-  --font-main: "Lato", sans-serif;
-  --font-heading: "Poppins", sans-serif;
+  --font-main: "JetBrains Mono", monospace;
+  --font-heading: "JetBrains Mono", monospace;
   --font-mono: "JetBrains Mono", monospace;
 }
 
@@ -20,51 +20,17 @@ body {
 section {
   margin: 0;
   padding-top: 1rem;
-  padding-bottom: 0.5;
+  padding-bottom: 0.5rem;
   padding-right: 4rem;
   padding-left: 4rem;
 
   position: relative;
   background-color: var(--bg);
-  font-family: var(--font-mono);
+  font-family: inherit;
 }
-
-/* .section-gradient::before,
-.section-gradient::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 30%;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.section-gradient::before {
-  top: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.8) 0%,
-    transparent 100%
-  );
-}
-
-.section-gradient::after {
-  bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(255, 255, 255, 0.8) 100%
-  );
-}
-
-.section-gradient > * {
-  position: relative;
-  z-index: 1;
-} */
 
 .section-h2 {
-  color: white;
+  color: #cbd5e1;
   font-size: 4rem;
   text-align: center;
   margin: 0;

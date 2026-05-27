@@ -8,9 +8,10 @@
 
   background: radial-gradient(
     circle at center,
-    rgba(89, 253, 252, 0.15) 0%,
-    rgba(89, 253, 252, 0.05) 40%,
-    rgba(15, 23, 42, 0.8) 100%
+
+    rgba(21, 112, 147, 0.08) 0%,
+    rgba(34, 165, 176, 0.12) 45%,
+    rgba(12, 65, 73, 0.85) 100%
   );
   backdrop-filter: blur(8px);
 
