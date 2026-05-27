@@ -1,21 +1,39 @@
-.knowledge {
+#knowledge {
   background-color: var(--bg);
-  background-image: url("../images/laptop.png");
-  position: relative;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  overflow: hidden;
-  padding-top: 80px;
 }
 
 .knowledge-grid {
   display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: -45px;
+}
+
+.laptop {
+  position: relative;
+  width: min(100%, 1280px);
+  min-height: 720px;
+  background-image: url("../images/laptop.png");
+  background-size: 118% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.techstack {
+  position: absolute;
+  left: 50%;
+  top: 38%;
+  transform: translate(-50%, -50%);
+  display: flex;
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
-  margin: 0 auto;
+  align-content: center;
+  width: min(58%, 640px);
+  max-height: 34%;
+  margin: 0;
+  overflow: hidden;
 }
 
 .skill {
@@ -36,4 +54,50 @@
 .skill:hover {
   transform: translateY(-2px);
   border-color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .knowledge-grid {
+    margin-top: 0;
+    padding: 0 32px;
+  }
+
+  .laptop {
+    width: 100%;
+    min-height: auto;
+    background-image: none;
+    overflow: visible;
+  }
+
+  .techstack {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-height: none;
+    margin: 0 auto;
+    padding: 24px;
+    gap: 16px;
+    background: radial-gradient(
+      circle at center,
+      rgba(21, 112, 147, 0.08) 0%,
+      rgba(34, 165, 176, 0.12) 45%,
+      rgba(12, 65, 73, 0.85) 100%
+    );
+    border: 1px solid rgba(89, 253, 252, 0.15);
+    border-radius: 32px;
+    box-shadow: 0 0 30px rgba(89, 253, 252, 0.08);
+    backdrop-filter: blur(8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .knowledge-grid {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .techstack {
+    padding: 16px;
+    gap: 8px;
+  }
 }
