@@ -1,3 +1,12 @@
+#references {
+  background-image: url("../images/backgroundR.jpg");
+  position: relative;
+  background-size: auto 500px;
+  background-position: right;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
 .references-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

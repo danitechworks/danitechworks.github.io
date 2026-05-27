@@ -1,8 +1,8 @@
 .contact {
-  background-image: url("../images/backgroundR.jpg");
+  background-image: url("../images/backgroundL.jpg");
   position: relative;
-  background-size: auto 500px;
-  background-position: right;
+  background-size: auto 600px;
+  background-position: left;
   background-repeat: no-repeat;
   overflow: hidden;
 }
