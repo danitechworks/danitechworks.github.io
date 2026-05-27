@@ -39,8 +39,19 @@
 
 .about-p {
   color: #cbd5e1;
-  text-align: left;
-  margin: 0;
-  padding-bottom: 16px;
-  line-height: 1.4rem;
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  column-gap: 2.5rem;
+  align-items: start;
+  margin-bottom: 16px;
+  margin-right: 16px;
+}
+
+.about-p i {
+  color: var(--accent);
+  font-size: 2rem;
+  width: 2rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
 }
