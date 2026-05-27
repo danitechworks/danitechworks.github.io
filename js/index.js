@@ -74,7 +74,7 @@ function displayWeatherInfo(data) {
 
   iconDisplay.src = getWeatherEmoji(icon);
   iconDisplay.alt = description;
-  iconDisplay.classList.add("iconDisply");
+  iconDisplay.classList.add("iconDisplay");
 
   card.appendChild(cityDisplay);
   card.appendChild(tempDisplay);
