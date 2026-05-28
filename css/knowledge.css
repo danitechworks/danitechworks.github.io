@@ -37,6 +37,16 @@
   overflow: hidden;
 }
 
+.ascii-badge {
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  text-shadow: 0 0 8px rgba(89, 253, 252, 0.45);
+}
+
 .skill {
   background-color: var(--divbg);
   color: var(--text);
