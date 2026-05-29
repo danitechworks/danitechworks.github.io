@@ -1,10 +1,10 @@
 .about-div {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   margin: 0 2rem;
-  justify-content: center;
-  padding: 0 24px;
+  padding: 24px;
   box-sizing: border-box;
+  position: relative;
 
   background: radial-gradient(
     circle at center,
@@ -16,6 +16,22 @@
   backdrop-filter: blur(8px);
   border: 1px solid rgba(89, 253, 252, 0.15);
   border-radius: 32px;
+}
+
+.about-div::before {
+  content: "";
+  position: absolute;
+  top: 88px;
+  bottom: 32px;
+  left: 60px;
+  width: 4px;
+  background: linear-gradient(
+    to bottom,
+    var(--accent),
+    rgba(89, 253, 252, 0.24)
+  );
+  border-radius: 999px;
+  box-shadow: 0 0 16px rgba(89, 253, 252, 0.35);
 }
 
 .about-h2 {
@@ -30,28 +46,72 @@
 
 .about-h3 {
   color: var(--text);
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   color: #59fdfc;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 8px 0 24px 64px;
 }
 
 .about-p {
   color: #cbd5e1;
   display: grid;
-  grid-template-columns: 2rem 1fr;
-  column-gap: 2.5rem;
+  grid-template-columns: 72px 1fr;
+  column-gap: 16px;
   align-items: start;
-  margin-bottom: 16px;
-  margin-right: 16px;
+  margin: 0 0 16px 0;
+  position: relative;
+  padding: 16px 16px 16px 0;
+  background: linear-gradient(
+    to right,
+    transparent 0 72px,
+    rgba(2, 9, 13, 0.48) 72px 100%
+  );
+  border-radius: 8px;
 }
 
 .about-p i {
+  position: relative;
+  z-index: 1;
   color: var(--accent);
   font-size: 2rem;
-  width: 2rem;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
   text-align: center;
-  margin-top: 0.5rem;
-  padding-left: 0.5rem;
+  margin-top: 0;
+  padding: 0;
+  background-color: var(--bg);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 16px rgba(89, 253, 252, 0.35);
+}
+
+@media (max-width: 768px) {
+  .about-div {
+    margin: 0 1rem;
+    padding: 16px;
+  }
+
+  .about-div::before {
+    left: 40px;
+    top: 80px;
+    bottom: 24px;
+  }
+
+  .about-h3 {
+    padding-left: 48px;
+  }
+
+  .about-p {
+    grid-template-columns: 48px 1fr;
+    column-gap: 16px;
+    background: linear-gradient(
+      to right,
+      transparent 0 48px,
+      rgba(2, 9, 13, 0.48) 48px 100%
+    );
+  }
 }
