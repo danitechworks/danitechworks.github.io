@@ -65,16 +65,17 @@
   .knowledge-grid {
     margin-top: 32px;
     margin-bottom: 32px;
-    padding: 0 32px;
+    padding: 0 8px;
   }
 
   .laptop {
     margin-top: 0;
     margin-bottom: 0;
-    width: min(100vw, 1040px);
+    flex: 0 0 min(100%, 1200px);
+    width: min(100%, 1200px);
     aspect-ratio: 16 / 11;
     min-height: auto;
-    background-image: url("../images/tablet-tech-bg-large.png");
+    background-image: url("../images/tablet-tech-bg-glass.png");
     background-size: contain;
     background-position: center top;
     background-repeat: no-repeat;
@@ -99,11 +100,11 @@
   }
 
   .terminal {
-    font-size: 12px;
+    /* font-size: 12px; */
   }
 
   .terminal-skill {
-    font-size: 12px;
+    /* font-size: 12px; */
     white-space: nowrap;
   }
 }
@@ -116,31 +117,33 @@
     padding: 0 16px;
   }
 
-  .techstack {
-    position: static;
-    transform: none;
-    width: 100%;
-    padding: 16px;
-    gap: 8px;
-    background: radial-gradient(
-      circle at center,
-      rgba(21, 112, 147, 0.08) 0%,
-      rgba(34, 165, 176, 0.12) 45%,
-      rgba(12, 65, 73, 0.85) 100%
-    );
-    border: 1px solid rgba(89, 253, 252, 0.15);
-    border-radius: 32px;
-    box-shadow: 0 0 30px rgba(89, 253, 252, 0.08);
-    backdrop-filter: blur(8px);
+  .laptop {
+    flex: 0 0 min(160vw, 760px);
+    width: min(160vw, 760px);
+    aspect-ratio: 2 / 3;
+    background-image: url("../images/phone-tech-bg.png");
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    overflow: hidden;
   }
 
-  .laptop {
-    aspect-ratio: auto;
-    background-image: none;
-    overflow: visible;
+  .techstack {
+    position: absolute;
+    left: 56%;
+    top: 12%;
+    transform: translateX(-50%);
+    width: 72%;
+    padding: 16px 8px;
+    gap: 8px;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
   }
 
   .terminal-skill {
-    white-space: normal;
+    white-space: nowrap;
   }
 }
