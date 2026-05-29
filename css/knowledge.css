@@ -69,37 +69,42 @@
   }
 
   .laptop {
-    width: 100%;
     margin-top: 0;
     margin-bottom: 0;
-    aspect-ratio: auto;
+    width: min(100vw, 1040px);
+    aspect-ratio: 16 / 11;
     min-height: auto;
-    background-image: none;
-    overflow: visible;
+    background-image: url("../images/tablet-tech-bg-large.png");
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    overflow: hidden;
   }
 
   .techstack {
-    position: static;
-    transform: none;
-    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    width: min(80%, 820px);
     max-height: none;
-    margin: 0 auto;
-    padding: 24px;
-    gap: 16px;
-    background: radial-gradient(
-      circle at center,
-      rgba(21, 112, 147, 0.08) 0%,
-      rgba(34, 165, 176, 0.12) 45%,
-      rgba(12, 65, 73, 0.85) 100%
-    );
-    border: 1px solid rgba(89, 253, 252, 0.15);
-    border-radius: 32px;
-    box-shadow: 0 0 30px rgba(89, 253, 252, 0.08);
-    backdrop-filter: blur(8px);
+    margin: 0;
+    padding: 16px;
+    gap: 8px;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  .terminal {
+    font-size: 12px;
   }
 
   .terminal-skill {
-    white-space: normal;
+    font-size: 12px;
+    white-space: nowrap;
   }
 }
 
@@ -112,7 +117,30 @@
   }
 
   .techstack {
+    position: static;
+    transform: none;
+    width: 100%;
     padding: 16px;
     gap: 8px;
+    background: radial-gradient(
+      circle at center,
+      rgba(21, 112, 147, 0.08) 0%,
+      rgba(34, 165, 176, 0.12) 45%,
+      rgba(12, 65, 73, 0.85) 100%
+    );
+    border: 1px solid rgba(89, 253, 252, 0.15);
+    border-radius: 32px;
+    box-shadow: 0 0 30px rgba(89, 253, 252, 0.08);
+    backdrop-filter: blur(8px);
+  }
+
+  .laptop {
+    aspect-ratio: auto;
+    background-image: none;
+    overflow: visible;
+  }
+
+  .terminal-skill {
+    white-space: normal;
   }
 }
