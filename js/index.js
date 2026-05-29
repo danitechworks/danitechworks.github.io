@@ -12,6 +12,44 @@ document.querySelectorAll(".projects-card").forEach((card) => {
   }
 });
 
+const skills = document.querySelectorAll(".terminal-skill");
+const speed = 20;
+
+let currentSkill = 0;
+
+// Save the original text from each li
+const texts = [];
+
+skills.forEach((skill) => {
+  texts.push(skill.textContent);
+  skill.textContent = "";
+});
+
+function typeLine() {
+  if (currentSkill >= skills.length) {
+    return;
+  }
+
+  let i = 0;
+  const skill = skills[currentSkill];
+  const txt = texts[currentSkill];
+
+  function typeCharacter() {
+    if (i < txt.length) {
+      skill.textContent += txt.charAt(i);
+      i++;
+      setTimeout(typeCharacter, speed);
+    } else {
+      currentSkill++;
+      setTimeout(typeLine, 300);
+    }
+  }
+
+  typeCharacter();
+}
+
+typeLine();
+
 const weatherForm = document.querySelector(".weatherForm");
 const cityInput = document.querySelector(".cityInput");
 const card = document.querySelector(".weatherCard");
