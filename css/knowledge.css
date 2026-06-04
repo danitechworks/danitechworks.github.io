@@ -66,21 +66,26 @@
   line-height: 0.9;
 }
 
-.techstack li:nth-child(2) {
-  margin-bottom: 16px;
-}
-
 .terminal-command {
   color: var(--text);
   font-size: 1rem;
   white-space: nowrap;
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 
 .terminal-skill {
   color: var(--text);
   font-size: 1rem;
   white-space: nowrap;
+  margin-bottom: 16px;
+}
+
+.terminal-skill:last-child {
+  margin-bottom: 0;
+}
+
+.techstack li:nth-child(2) {
+  margin-bottom: 16px;
 }
 
 @media (max-width: 1100px) {
