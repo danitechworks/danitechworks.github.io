@@ -73,23 +73,39 @@
   display: block;
 }
 
-.projects-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 16px;
-}
-
-.projects-img {
+.projects-website {
+  padding-top: 8px;
   position: relative;
   width: 100%;
   height: 220px;
   overflow: hidden;
+  border-radius: 15px;
 }
 
-.projects-img:empty {
-  display: none;
+.projects-website iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
+
+/* .projects-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+} */
+
+/* .projects-img {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+} */
+
+/* .projects-img:empty {
+  display: none;
+} */
 
 /* .projects-img::after {
   content: "";
