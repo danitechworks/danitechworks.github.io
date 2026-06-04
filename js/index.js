@@ -12,35 +12,41 @@ document.querySelectorAll(".projects-card").forEach((card) => {
   }
 });
 
-const skills = document.querySelectorAll(".terminal-skill");
+const terminalLines = document.querySelectorAll(
+  ".terminal-command, .terminal-skill",
+);
 const speed = 20;
 
-let currentSkill = 0;
+let currentLine = 0;
 
-// Save the original text from each li
 const texts = [];
 
-skills.forEach((skill) => {
-  texts.push(skill.textContent);
-  skill.textContent = "";
+terminalLines.forEach((line) => {
+  const text = line.querySelector(".typewriter-text");
+  texts.push(text.textContent);
+  text.textContent = "";
+  line.style.visibility = "hidden";
 });
 
 function typeLine() {
-  if (currentSkill >= skills.length) {
+  if (currentLine >= terminalLines.length) {
     return;
   }
 
   let i = 0;
-  const skill = skills[currentSkill];
-  const txt = texts[currentSkill];
+  const line = terminalLines[currentLine];
+  const text = line.querySelector(".typewriter-text");
+  const txt = texts[currentLine];
+
+  line.style.visibility = "visible";
 
   function typeCharacter() {
     if (i < txt.length) {
-      skill.textContent += txt.charAt(i);
+      text.textContent += txt.charAt(i);
       i++;
       setTimeout(typeCharacter, speed);
     } else {
-      currentSkill++;
+      currentLine++;
       setTimeout(typeLine, 300);
     }
   }
