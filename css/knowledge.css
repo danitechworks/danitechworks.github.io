@@ -2,6 +2,20 @@
   background-color: var(--bg);
 }
 
+#knowledge .section-h2 {
+  margin-bottom: 0;
+  padding-top: 16px;
+  padding-bottom: 0;
+}
+
+.section-intro {
+  text-align: center;
+  font-size: 24px;
+  color: var(--accent);
+  max-width: 800px;
+  margin: 0 auto 8px;
+}
+
 .knowledge-grid {
   display: flex;
   justify-content: center;
