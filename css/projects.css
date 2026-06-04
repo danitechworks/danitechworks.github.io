@@ -45,6 +45,12 @@
   text-align: center;
 }
 
+.projects-h4 {
+  font-size: 1rem;
+  color: var(--accent);
+  text-align: center;
+}
+
 .projects-p {
   font-size: 1rem;
   color: var(--text);
@@ -66,7 +72,7 @@
   overflow: hidden;
 }
 
-.projects-img::after {
+/* .projects-img::after {
   content: "";
   position: absolute;
   top: 0;
@@ -80,7 +86,7 @@
     rgba(221, 221, 223, 0.6) 94%
   );
   pointer-events: none;
-}
+} */
 
 .hover-video {
   position: absolute;
