@@ -54,7 +54,33 @@ function typeLine() {
   typeCharacter();
 }
 
-typeLine();
+const knowledgeSection = document.querySelector("#knowledge");
+let terminalStarted = false;
+
+function startTerminalAnimation() {
+  if (terminalStarted) {
+    return;
+  }
+
+  terminalStarted = true;
+  typeLine();
+}
+
+if (knowledgeSection && "IntersectionObserver" in window) {
+  const terminalObserver = new IntersectionObserver(
+    (entries, observer) => {
+      if (entries[0].isIntersecting) {
+        startTerminalAnimation();
+        observer.disconnect();
+      }
+    },
+    { threshold: 0.35 },
+  );
+
+  terminalObserver.observe(knowledgeSection);
+} else {
+  startTerminalAnimation();
+}
 
 const weatherForm = document.querySelector(".weatherForm");
 const cityInput = document.querySelector(".cityInput");
