@@ -130,13 +130,9 @@
   height: 100%;
   object-fit: cover;
 
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease;
   pointer-events: none;
-}
-
-.projects-card:hover .hover-video {
-  opacity: 1;
 }
 
 @media (max-width: 700px) {
