@@ -84,6 +84,7 @@
 .contact-form textarea {
   width: 100%;
   max-width: var(--contact-field-width);
+  height: 4rem;
   padding: 8px;
   margin-bottom: 16px;
 
