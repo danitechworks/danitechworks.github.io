@@ -90,9 +90,9 @@
 .contact-form-button {
   display: inline-block;
   text-decoration: none;
-  background-color: var(--bg);
-  color: var(--text);
-  border: 1px solid var(--accent);
+  background-color: var(--accent);
+  color: var(--bg);
+  border: 1px solid var(--bg);
   width: 100%;
   max-width: 350px;
 
@@ -101,7 +101,6 @@
   font-size: 1rem;
   letter-spacing: 1.5px;
 
-  border: none;
   outline: none;
   border-radius: 999px;
 
@@ -115,19 +114,10 @@
 }
 
 .contact-form-button:hover {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  background-color: var(--bg);
   color: var(--accent);
+  border-color: var(--accent);
   transform: translateY(-2px);
-}
-
-.contact-form-button::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 30%;
-  pointer-events: none;
 }
 
 .weather-div {
@@ -161,11 +151,25 @@
   .contact-layout {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    align-items: center;
   }
 
-  .map-box {
-    grid-column: 1;
-    grid-row: 2;
+  .contact-form {
+    align-items: center;
+  }
+
+  .contact-h3,
+  .contact-form label,
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form-button {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .contact-h3,
+  .contact-form label {
+    text-align: left;
   }
 
   .weather-div {
