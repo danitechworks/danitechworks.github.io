@@ -40,7 +40,7 @@
 .contact-h3 {
   color: var(--accent);
   text-align: left;
-  font-size: 2rem;
+  font-size: 24px;
   line-height: 1.6;
 }
 
@@ -54,7 +54,7 @@
 .contact-form label {
   display: block;
   margin-bottom: 8px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #cbd5e1;
 }
 
