@@ -20,7 +20,7 @@
 
 .references-card {
   position: relative;
-  border-radius: 15px;
+  overflow: hidden;
 
   padding-right: 8px;
   padding-left: 16px;
@@ -36,6 +36,10 @@
   backdrop-filter: blur(8px);
   border: 1px solid rgba(89, 253, 252, 0.15);
   border-radius: 32px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 .references-h3 {
@@ -56,37 +60,6 @@
   padding: 8px 16px;
 }
 
-/* .references-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 15px;
-}
-
-.references-img {
-  position: relative;
-  position: relative;
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-}
-
-.references-img::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 15px;
-  background: radial-gradient(
-    circle at center,
-    transparent 50%,
-    rgba(221, 221, 223, 0.6) 94%
-  );
-  pointer-events: none;
-} */
-
 .ref-btn {
   position: absolute;
   inset: 0;
@@ -94,16 +67,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 16px;
 
   background: rgba(0, 0, 0, 0.75);
 
   color: #ffffff;
   text-decoration: none;
+  text-align: center;
 
   font-size: 2rem;
   font-weight: 600;
   letter-spacing: 1px;
 
+  border-radius: inherit;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -111,4 +87,9 @@
 .references-card:hover .ref-btn {
   opacity: 1;
   color: var(--accent);
+}
+
+.references-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 24px rgba(89, 253, 252, 0.18);
 }
