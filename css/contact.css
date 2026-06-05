@@ -169,6 +169,13 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     align-items: center;
+    gap: 16px;
+
+    background: linear-gradient(
+      180deg,
+      rgb(12, 65, 73),
+      rgba(21, 112, 147, 0.08)
+    );
   }
 
   .contact-h3,
@@ -187,6 +194,10 @@
     grid-column: 1;
     grid-row: 3;
     width: 100%;
+  }
+
+  .weatherCard {
+    margin: 0 auto;
   }
 
   .weather-h3 {
