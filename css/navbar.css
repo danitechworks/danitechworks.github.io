@@ -131,8 +131,20 @@ header + main {
 
 @media (max-width: 991px) {
   .custom-navbar {
+    position: fixed;
     background-color: transparent;
     padding: 8px 16px;
+  }
+
+  .custom-navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    background-color: var(--bg);
+    z-index: -1;
   }
 
   .custom-navbar .navbar-collapse {
