@@ -5,10 +5,6 @@
   width: 100%;
   z-index: 1000;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   padding: 15px 40px;
 
   background-color: var(--bg);
@@ -17,10 +13,6 @@
 
 header + main {
   padding-top: 72px;
-}
-
-.custom-navbar .container-fluid {
-  align-items: center;
 }
 
 .custom-navbar .navbar-collapse {
@@ -33,11 +25,11 @@ header + main {
 }
 
 .custom-toggler {
-  border: 1px solid var(--text);
+  border: 0;
 }
 
 .custom-toggler:hover {
-  border-color: var(--accent);
+  background-color: rgba(89, 253, 252, 0.08);
 }
 
 .custom-toggler:focus {
@@ -82,15 +74,29 @@ header + main {
   background-color: var(--accent);
 }
 
+.language-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.language-link:hover {
+  color: var(--accent);
+}
+
+.language-link:hover .language-globe {
+  color: var(--accent);
+}
+
 .language-globe {
   color: var(--text);
   font-size: 1.6rem;
   margin: 0;
   transition: color 0.2s ease;
-}
-
-.language-globe:hover {
-  color: var(--accent);
 }
 
 .custom-navbar .nav-link,
@@ -110,6 +116,9 @@ header + main {
 }
 
 .custom-navbar .dropdown-menu {
+  right: 0;
+  left: auto;
+  min-width: 120px;
   background-color: var(--bg);
   border: 1px solid rgba(89, 253, 252, 0.25);
   text-align: right;
@@ -118,4 +127,48 @@ header + main {
 .custom-navbar .dropdown-item:hover,
 .custom-navbar .dropdown-item:focus {
   background-color: rgba(89, 253, 252, 0.08);
+}
+
+@media (max-width: 991px) {
+  .custom-navbar {
+    background-color: transparent;
+    padding: 8px 16px;
+  }
+
+  .custom-navbar .navbar-collapse {
+    padding-top: 16px;
+    background-color: transparent;
+  }
+
+  .custom-navbar .navbar-nav {
+    gap: 8px;
+  }
+
+  .custom-navbar .nav-link {
+    width: fit-content;
+    margin-left: auto;
+    padding: 8px 12px;
+    background-color: rgba(2, 9, 13, 0.72);
+    border-radius: 8px;
+    text-shadow: 0 2px 6px var(--bg);
+  }
+
+  .custom-navbar .dropdown-menu {
+    background-color: transparent;
+    border: 0;
+  }
+
+  .custom-navbar .dropdown-item {
+    width: fit-content;
+    margin-left: auto;
+    padding: 8px 12px;
+    background-color: rgba(2, 9, 13, 0.72);
+    border-radius: 8px;
+    text-align: right;
+  }
+
+  .custom-navbar .dropdown-item:hover,
+  .custom-navbar .dropdown-item:focus {
+    background-color: rgba(2, 9, 13, 0.84);
+  }
 }
