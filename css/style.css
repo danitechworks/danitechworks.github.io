@@ -1,11 +1,8 @@
 :root {
   --bg: #02090d;
   --card: #111827;
-  --text: #cbd5e1;
+  --text: #fafbfd;
   --accent: #59fdfc;
-  --accent2: #fc595a;
-  --accent-warm-pink: #ff5c8a;
-  --divbg: rgb(185, 178, 178);
 }
 
 :root {
@@ -32,7 +29,7 @@ section {
 }
 
 .section-h2 {
-  color: #cbd5e1;
+  color: white;
   font-size: 4rem;
   text-align: center;
   margin: 0;

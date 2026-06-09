@@ -35,7 +35,7 @@
 }
 
 .about-h2 {
-  color: #cbd5e1;
+  color: white;
   font-size: 4rem;
   text-align: center;
   margin-top: -4rem;
@@ -53,7 +53,7 @@
 }
 
 .about-p {
-  color: #cbd5e1;
+  color: var(--text);
   display: grid;
   grid-template-columns: 72px 1fr;
   column-gap: 16px;
