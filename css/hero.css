@@ -79,7 +79,7 @@
   color: #ffffff;
   text-align: left;
   font-family: "Space Grotesk", monospace;
-  font-size: 5.5rem;
+  font-size: 6rem;
   font-weight: 900;
   line-height: 1;
   letter-spacing: clamp(6px, 1.7vw, 18px);
@@ -157,7 +157,7 @@
   }
 
   .hero-h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     letter-spacing: 6px;
   }
 }
@@ -214,7 +214,7 @@
   }
 
   .hero-h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     letter-spacing: 4px;
     text-align: center;
   }
