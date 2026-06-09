@@ -20,7 +20,8 @@
 .knowledge-grid {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin-top: 1.5rem;
 }
 
 .laptop {
@@ -115,7 +116,7 @@
 
 @media (max-width: 900px) {
   .knowledge-grid {
-    margin-top: 32px;
+    margin-top: -16px;
     margin-bottom: 32px;
     padding: 0 8px;
   }
@@ -123,7 +124,7 @@
   .laptop {
     flex: 0 0 min(100%, 1200px);
     width: min(100%, 1200px);
-    min-height: clamp(560px, 78vw, 720px);
+    min-height: clamp(528px, calc(78vw - 32px), 688px);
     margin-top: 0;
     margin-bottom: 0;
 
@@ -139,7 +140,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 816px) {
   .knowledge-grid {
     width: 100%;
     padding: 0 16px;
@@ -155,8 +156,21 @@
   }
 
   .techstack {
-    left: 56%;
-    width: 72%;
+    left: calc(56% - 36px);
+    width: min(calc(60% + 64px), 384px);
     padding: 16px 8px;
+  }
+
+  .terminal,
+  .terminal-command,
+  .terminal-skill {
+    white-space: normal;
+  }
+
+  .terminal-path,
+  .typewriter-text {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    white-space: normal;
   }
 }

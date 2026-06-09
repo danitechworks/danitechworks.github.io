@@ -5,6 +5,7 @@
   background-position: left;
   background-repeat: no-repeat;
   overflow: hidden;
+  margin-top: -7rem;
 }
 
 .projects-grid {
@@ -98,6 +99,12 @@
   opacity: 1;
   transition: opacity 0.3s ease;
   pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .projects {
+    margin-top: -4.5rem;
+  }
 }
 
 @media (max-width: 700px) {
