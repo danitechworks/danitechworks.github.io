@@ -9,11 +9,12 @@
 }
 
 .section-intro {
-  text-align: center;
-  font-size: 24px;
-  color: var(--accent);
   max-width: 800px;
   margin: 0 auto 8px;
+
+  color: var(--accent);
+  font-size: 24px;
+  text-align: center;
 }
 
 .knowledge-grid {
@@ -24,130 +25,75 @@
 
 .laptop {
   position: relative;
-  margin-top: -4rem;
-  margin-bottom: 4rem;
   width: min(100vw, 1440px);
-  aspect-ratio: 3 / 2;
   min-height: clamp(560px, 66vw, 960px);
-  background-image: url("../images/laptop.png");
-  background-size: 112% 100%;
-  background-position: center top;
-  background-repeat: no-repeat;
+  margin-top: -56px;
+  margin-bottom: 64px;
   overflow: hidden;
+
+  aspect-ratio: 3 / 2;
+  background-image: url("../images/laptop.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 112% 100%;
 }
 
 .techstack {
-  list-style-type: none;
   position: absolute;
-
+  top: 15%;
   left: 50%;
-  top: 18%;
+  transform: translateX(-50%);
 
-  transform: translate(-50%);
   display: flex;
   flex-direction: column;
   gap: 4px;
-  justify-content: left;
   box-sizing: border-box;
   width: min(72%, 900px);
-  max-height: none;
   margin: 0;
   padding: 8px;
   overflow: visible;
+
+  list-style-type: none;
 }
 
 .techstack li {
   width: 100%;
 }
 
+.techstack li:nth-child(2) {
+  margin-bottom: 16px;
+}
+
+.terminal,
+.terminal-command,
+.terminal-skill {
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
 .terminal {
-  justify-self: left;
   color: var(--text);
   line-height: 0.9;
 }
 
 .terminal-command {
-  color: var(--text);
-  font-size: 1rem;
-  white-space: nowrap;
   margin-bottom: 0;
+  color: var(--text);
+}
+
+.terminal-path {
+  color: var(--text);
 }
 
 .terminal-skill {
-  color: var(--text);
-  font-size: 1rem;
-  white-space: nowrap;
   margin-bottom: 16px;
+  color: var(--accent);
+  letter-spacing: 2px;
+  font-size: 1.1rem;
 }
 
 .terminal-skill:last-child {
   margin-bottom: 0;
-}
-
-.techstack li:nth-child(2) {
-  margin-bottom: 16px;
-}
-
-@media (max-width: 1100px) {
-  .laptop {
-    min-height: 640px;
-  }
-
-  .terminal,
-  .terminal-command,
-  .terminal-skill {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .knowledge-grid {
-    margin-top: 32px;
-    margin-bottom: 32px;
-    padding: 0 8px;
-  }
-
-  .laptop {
-    margin-top: 0;
-    margin-bottom: 0;
-    flex: 0 0 min(100%, 1200px);
-    width: min(100%, 1200px);
-    aspect-ratio: 16 / 10.5;
-    min-height: clamp(560px, 78vw, 720px);
-    background-image: url("../images/tablet-tech-bg-glass.png");
-    background-size: 100% 100%;
-    background-position: center top;
-    background-repeat: no-repeat;
-    overflow: hidden;
-  }
-
-  .techstack {
-    position: absolute;
-    left: 50%;
-    top: 14%;
-    transform: translateX(-50%);
-    width: min(80%, 820px);
-    max-height: none;
-    margin: 0;
-    padding: 24px 16px 16px;
-    gap: 4px;
-    background: none;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-    backdrop-filter: none;
-  }
-
-  .terminal,
-  .terminal-command,
-  .terminal-skill {
-    font-size: 1rem;
-    white-space: nowrap;
-  }
-}
-
-.terminal-path {
-  color: var(--accent);
 }
 
 .cursor {
@@ -167,42 +113,50 @@
   }
 }
 
+@media (max-width: 900px) {
+  .knowledge-grid {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    padding: 0 8px;
+  }
+
+  .laptop {
+    flex: 0 0 min(100%, 1200px);
+    width: min(100%, 1200px);
+    min-height: clamp(560px, 78vw, 720px);
+    margin-top: 0;
+    margin-bottom: 0;
+
+    aspect-ratio: 16 / 10.5;
+    background-image: url("../images/tablet-tech-bg-glass.png");
+    background-size: 100% 100%;
+  }
+
+  .techstack {
+    top: 14%;
+    width: min(80%, 820px);
+    padding: 24px 16px 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .knowledge-grid {
     width: 100%;
-    margin-top: 32px;
-    margin-bottom: 32px;
     padding: 0 16px;
   }
 
   .laptop {
     flex: 0 0 min(160vw, 760px);
     width: min(160vw, 760px);
+
     aspect-ratio: 2 / 3;
     background-image: url("../images/phone-tech-bg.png");
     background-size: contain;
-    background-position: center top;
-    background-repeat: no-repeat;
-    overflow: hidden;
   }
 
   .techstack {
-    position: absolute;
     left: 56%;
-    top: 14%;
-    transform: translateX(-50%);
     width: 72%;
     padding: 16px 8px;
-    gap: 4px;
-    background: none;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-    backdrop-filter: none;
-  }
-
-  .terminal-skill {
-    font-size: 1rem;
-    white-space: nowrap;
   }
 }
