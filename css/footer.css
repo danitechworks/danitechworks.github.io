@@ -12,6 +12,7 @@
 
 .footer-text {
   color: var(--text);
+
   display: block;
   width: 100%;
   margin-left: auto;
@@ -48,4 +49,22 @@
 
 .footer-social-link:hover {
   transform: translateY(-2px);
+}
+
+.easter-egg {
+  display: inline-block;
+  font-size: 24px;
+  padding-top: 8px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.easter-egg:hover {
+  transform: scale(1.25) rotate(-10deg);
+  text-shadow:
+    0 0 5px var(--accent),
+    0 0 10px var(--accent),
+    0 0 20px var(--accent);
 }
