@@ -48,9 +48,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Space+Grotesk:wght@300..700&amp;display=swap"
       rel="stylesheet"
     />
+
+    <link rel="preload" href="images/dani4.png" as="image" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
     <title>Dannell Bayer</title>
   </head>
@@ -128,7 +132,7 @@
         <div class="hero-layout">
           <div class="container">
             <div class="hero-divImg">
-              <img src="images/dani4.png" alt="Portrait of Dannell Bayer" />
+              <img src="images/dani4.png" alt="Portrait of Dannell Bayer" width="433" height="577" fetchpriority="high" />
             </div>
             <div class="text">
               Eager to bring curiosity, creativity, and growing skills to a LIA
@@ -300,6 +304,7 @@
                 playsinline
                 loop
                 poster="images/construction.png"
+                width="342" height="214"
               >
                 <source src="videos/construction.mp4" type="video/mp4" />
               </video>
@@ -323,6 +328,7 @@
                 playsinline
                 loop
                 poster="images/construction.png"
+                width="342" height="214"
               >
                 <source src="videos/construction.mp4" type="video/mp4" />
               </video>
@@ -532,6 +538,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script src="js/index.js"></script>
+    <script src="js/index.js" defer></script>
   </body>
 </html>
