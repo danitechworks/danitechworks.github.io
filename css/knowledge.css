@@ -33,7 +33,6 @@
   overflow: hidden;
 
   aspect-ratio: 3 / 2;
-  background-image: url("../images/laptop.png");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 112% 100%;
@@ -172,5 +171,12 @@
     overflow-wrap: anywhere;
     word-break: break-word;
     white-space: normal;
+  }
+}
+
+@media (min-width: 901px) {
+  .laptop {
+    background-image: url("../images/laptop.png");
+    background-size: 112% 100%;
   }
 }

@@ -47,14 +47,16 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://api.openweathermap.org" />
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Space+Grotesk:wght@300..700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
       rel="stylesheet"
     />
 
     <link rel="preload" href="images/dani4.png" as="image" />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin />
 
     <title>Dannell Bayer</title>
   </head>
@@ -132,7 +134,13 @@
         <div class="hero-layout">
           <div class="container">
             <div class="hero-divImg">
-              <img src="images/dani4.png" alt="Portrait of Dannell Bayer" width="433" height="577" fetchpriority="high" />
+              <img
+                src="images/dani4.png"
+                alt="Portrait of Dannell Bayer"
+                width="433"
+                height="577"
+                fetchpriority="high"
+              />
             </div>
             <div class="text">
               Eager to bring curiosity, creativity, and growing skills to a LIA
@@ -280,11 +288,18 @@
             <h3 class="projects-h3">Ravenfjord-Reserve</h3>
             <h4 class="projects-h4">Fantasy-Inspired Responsive Website</h4>
             <div class="projects-website">
-              <iframe
-                src="https://dannellbayer.com/Ravenfjord-Reserve/"
-                title="Ravenfjord Reserve"
+              <a
+                href="https://dannellbayer.com/Ravenfjord-Reserve/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-              </iframe>
+                <img
+                  src="images/ravenfjord.png"
+                  alt="Ravenfjord Reserve screenshot"
+                  width="600"
+                  height="400"
+                />
+              </a>
             </div>
             <p class="projects-p">
               A fantasy-themed responsive website inspired by Norse mythology,
@@ -304,7 +319,8 @@
                 playsinline
                 loop
                 poster="images/construction.png"
-                width="342" height="214"
+                width="342"
+                height="214"
               >
                 <source src="videos/construction.mp4" type="video/mp4" />
               </video>
@@ -328,7 +344,8 @@
                 playsinline
                 loop
                 poster="images/construction.png"
-                width="342" height="214"
+                width="342"
+                height="214"
               >
                 <source src="videos/construction.mp4" type="video/mp4" />
               </video>
