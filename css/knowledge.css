@@ -143,27 +143,31 @@
 @media (max-width: 816px) {
   .knowledge-grid {
     width: 100%;
-    padding: 0 16px;
+    padding: 0;
   }
 
   .laptop {
-    flex: 0 0 min(160vw, 760px);
-    width: min(160vw, 760px);
+    flex: 0 0 min(116vw, 580px);
+    width: min(116vw, 580px);
+    min-height: auto;
 
     aspect-ratio: 2 / 3;
     background-image: url("../images/phone-tech-bg.png");
-    background-size: contain;
+    background-size: 100% 100%;
   }
 
   .techstack {
-    left: calc(56% - 36px);
-    width: min(calc(60% + 64px), 384px);
-    padding: 16px 8px;
+    top: calc(12% - 8px);
+    left: 50%;
+    width: 68%;
+    padding: 16px 8px 16px 16px;
   }
 
   .terminal,
   .terminal-command,
   .terminal-skill {
+    font-size: 0.8125rem;
+    line-height: 1.2;
     white-space: normal;
   }
 
@@ -172,6 +176,10 @@
     overflow-wrap: anywhere;
     word-break: break-word;
     white-space: normal;
+  }
+
+  .terminal-skill {
+    letter-spacing: 0;
   }
 }
 
