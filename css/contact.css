@@ -92,6 +92,23 @@
   border: 3px solid var(--accent);
 }
 
+.form-error {
+  display: block;
+  width: 100%;
+  max-width: var(--contact-field-width);
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  margin-top: -4px;
+  min-height: 1.2em;
+}
+
+.form-success {
+  color: #4ade80;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 24px;
+}
+
 .contact-form-button {
   display: inline-block;
   text-decoration: none;

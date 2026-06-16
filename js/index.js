@@ -93,3 +93,50 @@ const WEATHER_KEY = "735aafa53526ebaad3622866aa203515";
       '<p class="errorDisplay">Could not fetch Stockholm weather</p>';
   }
 })();
+
+//Contact form validation
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  const isSv = document.documentElement.lang === "sv";
+  const msgs = isSv
+    ? { name: "Ange ditt namn", email: "Ange en giltig e-postadress", message: "Skriv ett meddelande" }
+    : { name: "Please enter your name", email: "Please enter a valid email address", message: "Please enter your message" };
+
+  const fields = {
+    name: { error: document.getElementById("name-error"), valid: (v) => v.trim() !== "" },
+    email: {
+      error: document.getElementById("email-error"),
+      valid: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
+    },
+    message: { error: document.getElementById("message-error"), valid: (v) => v.trim() !== "" },
+  };
+
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    let allValid = true;
+    for (const [id, field] of Object.entries(fields)) {
+      const input = document.getElementById(id);
+      const val = input.value;
+      if (!field.valid(val)) {
+        field.error.textContent = msgs[id];
+        field.error.style.display = "block";
+        allValid = false;
+      } else {
+        field.error.textContent = "";
+      }
+    }
+    if (!allValid) return;
+
+    const formData = new FormData(contactForm);
+    try {
+      const res = await fetch(contactForm.action, { method: "POST", body: formData });
+      if (res.ok) {
+        contactForm.innerHTML = `<p class="form-success">${isSv ? "Tack! Meddelandet har skickats." : "Thank you! Your message has been sent."}</p>`;
+      } else {
+        throw new Error();
+      }
+    } catch {
+      alert(isSv ? "Något gick fel. Försök igen." : "Something went wrong. Please try again.");
+    }
+  });
+}

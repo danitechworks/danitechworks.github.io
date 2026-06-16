@@ -17,7 +17,7 @@
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image"
-      content="https://dannellbayer.com//images/dani3.png"
+      content="https://dannellbayer.com/images/dani4.png"
     />
     <meta property="og:type" content="website" />
 
@@ -132,7 +132,7 @@
             </div>
             <div class="text">
               Jag vill bidra med nyfikenhet, kreativitet och växande kunskaper
-              under en LIA-plats mars–maj och augusti–november 2027.
+              under en LIA-plats mars-maj och augusti-november 2027.
             </div>
           </div>
           <div class="hero-div">
@@ -249,24 +249,33 @@
             <h3 class="projects-h3">Danibot</h3>
             <h4 class="projects-h4">Webbaserad chatbot med CI/CD-pipeline</h4>
             <div class="projects-video">
-                <img
-                  src="/images/cicd.png"
-                  alt="Danibot project video thumbnail"
-                />
-                <a
-                  href="https://www.youtube.com/watch?v=EIUSUtF39sE"
-                  class="project-btn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Se presentationsvideo
-                </a>
+              <img
+                src="/images/cicd.png"
+                alt="Danibot project video thumbnail"
+              />
+              <a
+                href="https://www.youtube.com/watch?v=EIUSUtF39sE"
+                class="project-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Se presentationsvideo
+              </a>
             </div>
             <p class="projects-p">
               En webbaserad chatbot byggd för att demonstrera ett modernt
               CI/CD-arbetsflöde. Den svarar på vanliga frågor om Linux, Git, SSH
               och AWS med statisk HTML, regelbaserad JavaScript, tester, linting
               och automatiserad driftsättning.
+              <a
+                href="https://github.com/danitechworks/Danibot.git"
+                class="github-project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Se källkoden på GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
             </p>
           </article>
 
@@ -274,23 +283,32 @@
             <h3 class="projects-h3">Ravenfjord-Reserve</h3>
             <h4 class="projects-h4">Fantasyinspirerad responsiv webbplats</h4>
             <div class="projects-website">
-                <img
-                  src="images/ravenfjord.png"
-                  alt="Ravenfjord Reserve screenshot"
-                />
-                <a
-                  href="https://dannellbayer.com/Ravenfjord-Reserve/"
-                  class="project-btn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Besök webbplatsen
-                </a>
+              <img
+                src="images/ravenfjord.png"
+                alt="Ravenfjord Reserve screenshot"
+              />
+              <a
+                href="https://dannellbayer.com/Ravenfjord-Reserve/"
+                class="project-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Besök webbplatsen
+              </a>
             </div>
             <p class="projects-p">
               En fantasyinspirerad responsiv webbplats med nordisk mytologi som
               tema, byggd med HTML, CSS Grid/Flexbox, Google Maps-embed, varels
               galleri, nyhetsbrevsformulär och egen visuell stil.
+              <a
+                href="https://github.com/danitechworks/Ravenfjord-Reserve.git"
+                class="github-project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Se källkoden på GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
             </p>
           </article>
 
@@ -314,6 +332,15 @@
               Entity Framework Core, lagerindelad arkitektur och
               CRUD-funktioner. Kommer snart som en modern webbapplikation med
               separat frontend.
+              <a
+                href="https://github.com/danitechworks/HotelReservationApp.git"
+                class="github-project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Se källkoden på GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
             </p>
           </article>
 
@@ -336,6 +363,15 @@
               En React- och TypeScript-baserad flashcard-app i planeringsstadiet
               för repetition av utvecklarteori och kurskoncept, med framtida
               planer för ASP.NET Core API och Azure-driftsättning.
+              <a
+                href="https://github.com/danitechworks/FlashStack.git"
+                class="github-project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Se källkoden på GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
             </p>
           </article>
         </div>
@@ -400,9 +436,10 @@
         <div class="contact-layout">
           <form
             class="contact-form"
+            id="contactForm"
             action="https://api.web3forms.com/submit"
             method="POST"
-            target="_blank"
+            novalidate
           >
             <h3 class="contact-h3">Skicka e-post</h3>
 
@@ -414,6 +451,7 @@
               placeholder="Ditt namn"
               required
             />
+            <span class="form-error" id="name-error" aria-live="polite"></span>
 
             <label for="email">E-post</label>
             <input
@@ -423,6 +461,7 @@
               placeholder="Din e-postadress"
               required
             />
+            <span class="form-error" id="email-error" aria-live="polite"></span>
 
             <label for="message">Meddelande</label>
             <textarea
@@ -431,6 +470,11 @@
               placeholder="Skriv ditt meddelande här..."
               required
             ></textarea>
+            <span
+              class="form-error"
+              id="message-error"
+              aria-live="polite"
+            ></span>
 
             <input
               type="hidden"
@@ -468,7 +512,7 @@
           class="d-flex justify-content-center align-items-center flex-wrap gap-3 mb-3"
         >
           <a
-            href="mailto:danibayer2003@yahoo.com"
+            href="mailto:danibayer2003@gmail.com"
             class="footer-link d-inline-flex align-items-center gap-2 text-decoration-none"
             aria-label="Skicka e-post"
           >
@@ -477,7 +521,7 @@
           </a>
 
           <a
-            href="tel:+46700000000"
+            href="tel:+46709200329"
             class="footer-link d-inline-flex align-items-center gap-2 text-decoration-none"
             aria-label="Ring telefonnummer"
           >

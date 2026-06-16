@@ -58,6 +58,18 @@
   padding: 8px 16px;
 }
 
+.github-project-link {
+  color: var(--text);
+  font-size: 1.25rem;
+  margin-left: 8px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.github-project-link:hover {
+  color: var(--accent);
+}
+
 .projects-video {
   padding-top: 8px;
   position: relative;
