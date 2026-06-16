@@ -62,7 +62,7 @@
   padding-top: 8px;
   position: relative;
   width: 100%;
-  height: 300px;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 15px;
 }
@@ -71,7 +71,7 @@
   padding-top: 8px;
   position: relative;
   width: 100%;
-  height: 300px;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 15px;
 }
@@ -118,6 +118,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  max-width: none;
 }
 
 .projects-video:hover .project-btn,

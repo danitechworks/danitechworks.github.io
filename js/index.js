@@ -15,7 +15,7 @@ document.querySelectorAll(".projects-card").forEach((card) => {
 const terminalLines = document.querySelectorAll(
   ".terminal-command, .terminal-skill",
 );
-const speed = 20;
+const speed = 8;
 
 let currentLine = 0;
 
@@ -82,85 +82,32 @@ if (knowledgeSection && "IntersectionObserver" in window) {
   startTerminalAnimation();
 }
 
-const card = document.querySelector(".weatherCard");
-const apiKey = "735aafa53526ebaad3622866aa203515";
-const defaultWeatherCity = "Stockholm";
+const weatherCard = document.querySelector(".weatherCard");
+const WEATHER_KEY = "735aafa53526ebaad3622866aa203515";
 
-async function loadCurrentWeather() {
-  if (!card) {
-    return;
-  }
-
+(async () => {
+  if (!weatherCard) return;
   try {
-    const weatherData = await getWeatherData(defaultWeatherCity);
-    displayWeatherInfo(weatherData);
-  } catch (error) {
-    console.error(error);
-    displayError("Could not fetch Stockholm weather");
+    const res = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=Stockholm&appid=${WEATHER_KEY}&units=metric`,
+    );
+    if (!res.ok) throw new Error();
+    const {
+      name,
+      main: { temp, humidity },
+      weather: [{ description, icon }],
+    } = await res.json();
+    weatherCard.style.display = "flex";
+    weatherCard.innerHTML = `
+      <h3 class="cityDisplay">${name}</h3>
+      <p class="tempDisplay">${temp}°C</p>
+      <p class="humidityDisplay">Humidity: ${humidity}%</p>
+      <p class="descDisplay">${description}</p>
+      <img class="iconDisplay" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}" />
+    `;
+  } catch {
+    weatherCard.style.display = "flex";
+    weatherCard.innerHTML =
+      '<p class="errorDisplay">Could not fetch Stockholm weather</p>';
   }
-}
-
-loadCurrentWeather();
-
-async function getWeatherData(city) {
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-  const response = await fetch(apiUrl);
-
-  if (!response.ok) {
-    throw new Error("Could not fetch weather data");
-  }
-
-  return await response.json();
-}
-
-function displayWeatherInfo(data) {
-  const {
-    name: city,
-    main: { temp, humidity },
-    weather: [{ description, icon }],
-  } = data;
-  card.textContent = "";
-  card.style.display = "flex";
-
-  const cityDisplay = document.createElement("h3");
-  const tempDisplay = document.createElement("p");
-  const humidityDisplay = document.createElement("p");
-  const descDisplay = document.createElement("p");
-  const iconDisplay = document.createElement("img");
-
-  cityDisplay.textContent = city;
-  cityDisplay.classList.add("cityDisplay");
-
-  tempDisplay.textContent = `${temp}°C`;
-  tempDisplay.classList.add("tempDisplay");
-
-  humidityDisplay.textContent = `Humidity: ${humidity}%`;
-  humidityDisplay.classList.add("humidityDisplay");
-
-  descDisplay.textContent = description;
-  descDisplay.classList.add("descDisplay");
-
-  iconDisplay.src = getWeatherEmoji(icon);
-  iconDisplay.alt = description;
-  iconDisplay.classList.add("iconDisplay");
-
-  card.appendChild(cityDisplay);
-  card.appendChild(tempDisplay);
-  card.appendChild(humidityDisplay);
-  card.appendChild(descDisplay);
-  card.appendChild(iconDisplay);
-}
-
-function getWeatherEmoji(weatherIcon) {
-  return `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
-}
-
-function displayError(message) {
-  const errorDisplay = document.createElement("p");
-  errorDisplay.textContent = message;
-  errorDisplay.classList.add("errorDisplay");
-  card.textContent = "";
-  card.style.display = "flex";
-  card.appendChild(errorDisplay);
-}
+})();
