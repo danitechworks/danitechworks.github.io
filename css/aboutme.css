@@ -91,27 +91,35 @@
 
 @media (max-width: 768px) {
   .about-div {
-    margin: 0 1rem;
+    margin: 0;
     padding: 16px;
   }
 
   .about-div::before {
-    left: 40px;
+    left: 32px;
     top: 80px;
     bottom: 24px;
   }
 
   .about-h3 {
-    padding-left: 48px;
+    padding-left: 40px;
   }
 
   .about-p {
-    grid-template-columns: 48px 1fr;
-    column-gap: 16px;
+    grid-template-columns: 40px minmax(0, 1fr);
+    column-gap: 8px;
+    overflow-wrap: anywhere;
+    word-break: break-word;
     background: linear-gradient(
       to right,
-      transparent 0 48px,
-      rgba(2, 9, 13, 0.48) 48px 100%
+      transparent 0 40px,
+      rgba(2, 9, 13, 0.48) 40px 100%
     );
+  }
+
+  .about-p i {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
   }
 }
