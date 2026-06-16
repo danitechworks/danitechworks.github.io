@@ -15,10 +15,15 @@
 
   display: block;
   width: 100%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
+}
+
+.footer-link span {
+  overflow-wrap: anywhere;
 }
 .footer-small {
   color: var(--text);
