@@ -1,3 +1,4 @@
+//Play construction video on hover for coming soon project cards
 document.querySelectorAll(".projects-card").forEach((card) => {
   const video = card.querySelector(".hover-video");
   if (video) {
@@ -12,76 +13,57 @@ document.querySelectorAll(".projects-card").forEach((card) => {
   }
 });
 
-const terminalLines = document.querySelectorAll(
-  ".terminal-command, .terminal-skill",
-);
+//Typewriter effect for Knowledge section
 const speed = 8;
+const gap = 300; //pause at the end of each line
+const lines = [...document.querySelectorAll(".typewriter-text")];
+let idx = 0;
 
-let currentLine = 0;
-
-const texts = [];
-
-terminalLines.forEach((line) => {
-  const text = line.querySelector(".typewriter-text");
-  texts.push(text.textContent);
-  text.textContent = "";
-  line.style.visibility = "hidden";
+//hides text until typewriter effect starts
+lines.forEach((el) => {
+  el.dataset.text = el.textContent;
+  el.textContent = "";
+  el.closest("li").style.visibility = "hidden";
 });
 
-function typeLine() {
-  if (currentLine >= terminalLines.length) {
-    return;
-  }
-
+//Starts typing hidden text
+function type() {
+  if (idx >= lines.length) return;
+  const el = lines[idx];
+  el.closest("li").style.visibility = "visible";
+  const text = el.dataset.text;
   let i = 0;
-  const line = terminalLines[currentLine];
-  const text = line.querySelector(".typewriter-text");
-  const txt = texts[currentLine];
-
-  line.style.visibility = "visible";
-
-  function typeCharacter() {
-    if (i < txt.length) {
-      text.textContent += txt.charAt(i);
-      i++;
-      setTimeout(typeCharacter, speed);
+  function write() {
+    if (i < text.length) {
+      el.textContent += text[i++];
+      setTimeout(write, speed);
     } else {
-      currentLine++;
-      setTimeout(typeLine, 300);
+      idx++;
+      setTimeout(type, gap);
     }
   }
-
-  typeCharacter();
+  write();
 }
 
-const knowledgeSection = document.querySelector("#knowledge");
-let terminalStarted = false;
-
-function startTerminalAnimation() {
-  if (terminalStarted) {
-    return;
-  }
-
-  terminalStarted = true;
-  typeLine();
-}
-
-if (knowledgeSection && "IntersectionObserver" in window) {
-  const terminalObserver = new IntersectionObserver(
-    (entries, observer) => {
-      if (entries[0].isIntersecting) {
-        startTerminalAnimation();
-        observer.disconnect();
+//Watches for when section scrolls into view to start effect
+const section = document.querySelector("#knowledge");
+if (section && "IntersectionObserver" in window) {
+  const obs = new IntersectionObserver(
+    ([e], o) => {
+      if (e.isIntersecting) {
+        o.disconnect();
+        type();
       }
     },
     { threshold: 0.35 },
   );
-
-  terminalObserver.observe(knowledgeSection);
+  obs.observe(section);
+  //If effect not support will type immediately
 } else {
-  startTerminalAnimation();
+  type();
 }
 
+//Weather API
 const weatherCard = document.querySelector(".weatherCard");
 const WEATHER_KEY = "735aafa53526ebaad3622866aa203515";
 
