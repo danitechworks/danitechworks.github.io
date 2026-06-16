@@ -1,5 +1,6 @@
 #knowledge {
   background-color: var(--bg);
+  overflow-x: hidden;
 }
 
 #knowledge .section-h2 {

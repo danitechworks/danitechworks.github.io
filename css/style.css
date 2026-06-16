@@ -9,6 +9,11 @@
   --font-main: "JetBrains Mono", monospace;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--bg);
   font-family: var(--font-main);
@@ -34,4 +39,15 @@ section {
   padding: 1rem 0;
   font-family: var(--font-mono);
   text-shadow: 0px 2px 4px #59fdfc;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .section-h2 {
+    font-size: 3rem;
+  }
 }
