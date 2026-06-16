@@ -40,15 +40,17 @@
 }
 
 .projects-h3 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--text);
   text-align: center;
+  padding: 8px;
 }
 
 .projects-h4 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: var(--accent);
   text-align: center;
+  padding-bottom: 8px;
 }
 
 .projects-p {
@@ -61,32 +63,18 @@
   padding-top: 8px;
   position: relative;
   width: 100%;
-  height: 256px;
+  height: 300px;
   overflow: hidden;
   border-radius: 15px;
-}
-
-.projects-video iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
 }
 
 .projects-website {
   padding-top: 8px;
   position: relative;
   width: 100%;
-  height: 256px;
+  height: 300px;
   overflow: hidden;
   border-radius: 15px;
-}
-
-.projects-website iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
 }
 
 .hover-video {
