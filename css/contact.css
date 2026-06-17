@@ -185,7 +185,7 @@
 
 @media (max-width: 980px) {
   .contact-layout {
-    --contact-field-width: 350px;
+    --contact-field-width: 500px;
 
     grid-template-columns: 1fr;
     grid-template-rows: auto;
