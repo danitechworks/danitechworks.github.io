@@ -150,9 +150,14 @@
   font-size: 2rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .projects {
     margin-top: -4.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    max-width: 784px;
   }
 }
 
