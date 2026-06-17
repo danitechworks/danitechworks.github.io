@@ -139,6 +139,17 @@
   color: var(--accent);
 }
 
+.github-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+.github-icon i {
+  font-size: 2rem;
+}
+
 @media (max-width: 900px) {
   .projects {
     margin-top: -4.5rem;
