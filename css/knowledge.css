@@ -151,15 +151,15 @@
     width: min(116vw, 580px);
     min-height: auto;
 
-    aspect-ratio: 2 / 3;
+    aspect-ratio: 4 / 5;
     background-image: url("../images/phone-tech-bg.png");
     background-size: 100% 100%;
   }
 
   .techstack {
     top: calc(12% - 8px);
-    left: 52%;
-    width: 66%;
+    left: 51%;
+    width: 58%;
     padding: 16px 8px 16px 16px;
   }
 
