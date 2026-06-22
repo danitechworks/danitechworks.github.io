@@ -4,27 +4,10 @@
   border-top: 1px solid rgba(89, 253, 252, 0.25);
 }
 
-.footer-logo {
-  color: var(--accent);
-  font-family: var(--font-mono);
-  font-size: 2rem;
-}
-
-.footer-text {
-  color: var(--text);
-
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  overflow-wrap: anywhere;
-}
-
 .footer-link span {
   overflow-wrap: anywhere;
 }
+
 .footer-small {
   color: var(--text);
 }
