@@ -2,6 +2,24 @@
   background-color: var(--bg);
   color: var(--text);
   border-top: 1px solid rgba(89, 253, 252, 0.25);
+  padding-right: 6rem;
+  padding-left: 6rem;
+}
+
+.footer .container {
+  max-width: 1040px;
+}
+
+.footer-main-row {
+  min-height: 72px;
+}
+
+.footer-column {
+  min-height: 72px;
+}
+
+.footer-column:last-child {
+  padding-top: 12px;
 }
 
 .footer-link span {
@@ -55,4 +73,24 @@
     0 0 5px var(--accent),
     0 0 10px var(--accent),
     0 0 20px var(--accent);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .footer .container {
+    max-width: 100%;
+  }
+
+  .footer-main-row,
+  .footer-column {
+    min-height: auto;
+  }
+
+  .footer-column:last-child {
+    padding-top: 0;
+  }
 }
