@@ -10,9 +10,9 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(280px, 560px));
-  gap: 48px;
-  max-width: calc(2 * 560px + 64px);
+  grid-template-columns: repeat(2, minmax(280px, 738px));
+  gap: 64px;
+  max-width: calc(2 * 738px + 64px);
   margin: 16px auto;
   justify-content: center;
   padding: 0 8px;

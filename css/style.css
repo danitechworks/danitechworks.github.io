@@ -3,9 +3,6 @@
   --card: #111827;
   --text: #fafbfd;
   --accent: #59fdfc;
-}
-
-:root {
   --font-main: "JetBrains Mono", monospace;
 }
 
@@ -37,7 +34,7 @@ section {
   text-align: center;
   margin: 0;
   padding: 1rem 0;
-  font-family: var(--font-mono);
+  font-family: var(--font-main);
   text-shadow: 0px 2px 4px #59fdfc;
 }
 

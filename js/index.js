@@ -1,10 +1,10 @@
-//Play construction video on hover for coming soon project cards
+// Play construction video on hover for coming soon project cards
 document.querySelectorAll(".projects-card").forEach((card) => {
   const video = card.querySelector(".hover-video");
   if (video) {
     video.load();
     card.addEventListener("mouseenter", () => {
-      video.play().catch((e) => console.log("Play error:", e));
+      video.play().catch(() => {});
     });
     card.addEventListener("mouseleave", () => {
       video.pause();
@@ -13,20 +13,20 @@ document.querySelectorAll(".projects-card").forEach((card) => {
   }
 });
 
-//Typewriter effect for Knowledge section
+// Typewriter effect for Knowledge section
 const speed = 8;
-const gap = 300; //pause at the end of each line
+const gap = 300; // Pause at the end of each line
 const lines = [...document.querySelectorAll(".typewriter-text")];
 let idx = 0;
 
-//hides text until typewriter effect starts
+// Hides text until typewriter effect starts
 lines.forEach((el) => {
   el.dataset.text = el.textContent;
   el.textContent = "";
   el.closest("li").style.visibility = "hidden";
 });
 
-//Starts typing hidden text
+// Starts typing hidden text
 function type() {
   if (idx >= lines.length) return;
   const el = lines[idx];
@@ -45,7 +45,7 @@ function type() {
   write();
 }
 
-//Watches for when section scrolls into view to start effect
+// Watches for when section scrolls into view to start effect
 const section = document.querySelector("#knowledge");
 if (section && "IntersectionObserver" in window) {
   const obs = new IntersectionObserver(
@@ -58,12 +58,12 @@ if (section && "IntersectionObserver" in window) {
     { threshold: 0.35 },
   );
   obs.observe(section);
-  //If effect not support will type immediately
+  // If the effect is not supported, type immediately
 } else {
   type();
 }
 
-//Weather API
+// Weather API
 const weatherCard = document.querySelector(".weatherCard");
 const WEATHER_KEY = "735aafa53526ebaad3622866aa203515";
 
@@ -94,7 +94,7 @@ const WEATHER_KEY = "735aafa53526ebaad3622866aa203515";
   }
 })();
 
-//Contact form validation
+// Contact form validation
 const contactForm = document.getElementById("contactForm");
 if (contactForm) {
   const isSv = document.documentElement.lang === "sv";
