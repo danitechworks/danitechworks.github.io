@@ -35,7 +35,7 @@
 @media (hover: none) {
   .connect-card-button {
     align-items: flex-end;
-    padding-bottom: 24px;
+    padding-bottom: 2px;
     background: linear-gradient(transparent 45%, rgba(0, 9, 13, 0.84));
     opacity: 1;
   }
