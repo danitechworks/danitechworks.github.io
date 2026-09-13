@@ -1,7 +1,8 @@
 .footer {
-  background-color: var(--bg);
+  background:
+    radial-gradient(ellipse at bottom right, rgba(89, 253, 252, 0.14), transparent 65%),
+    linear-gradient(115deg, #102338 0%, #092c3c 50%, #103d4a 100%);
   color: var(--text);
-  border-top: 1px solid rgba(89, 253, 252, 0.25);
   padding-right: 6rem;
   padding-left: 6rem;
 }
