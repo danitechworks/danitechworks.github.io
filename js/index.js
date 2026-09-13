@@ -62,36 +62,30 @@ if (section && "IntersectionObserver" in window) {
   type();
 }
 
-// Weather API
-const weatherCard = document.querySelector(".weatherCard");
-const WEATHER_KEY = "735aafa53526ebaad3622866aa203515";
+// Play the contact animation only while it is visible on screen.
+const connectVideo = document.querySelector(".connect-video");
+if (connectVideo && "IntersectionObserver" in window) {
+  let isOnScreen = false;
 
-(async () => {
-  if (!weatherCard) return;
-  try {
-    const res = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=Stockholm&appid=${WEATHER_KEY}&units=metric`,
-    );
-    if (!res.ok) throw new Error();
-    const {
-      name,
-      main: { temp, humidity },
-      weather: [{ description, icon }],
-    } = await res.json();
-    weatherCard.style.display = "flex";
-    weatherCard.innerHTML = `
-      <h3 class="cityDisplay">${name}</h3>
-      <p class="tempDisplay">${temp}°C</p>
-      <p class="humidityDisplay">Humidity: ${humidity}%</p>
-      <p class="descDisplay">${description}</p>
-      <img class="iconDisplay" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}" />
-    `;
-  } catch {
-    weatherCard.style.display = "flex";
-    weatherCard.innerHTML =
-      '<p class="errorDisplay">Could not fetch Stockholm weather</p>';
-  }
-})();
+  const updateConnectVideo = () => {
+    if (isOnScreen && !document.hidden) {
+      connectVideo.play().catch(() => {});
+    } else {
+      connectVideo.pause();
+    }
+  };
+
+  const videoObserver = new IntersectionObserver(
+    ([entry]) => {
+      isOnScreen = entry.isIntersecting;
+      updateConnectVideo();
+    },
+    { threshold: 0.25 },
+  );
+
+  videoObserver.observe(connectVideo);
+  document.addEventListener("visibilitychange", updateConnectVideo);
+}
 
 // Contact form validation
 const contactForm = document.getElementById("contactForm");
