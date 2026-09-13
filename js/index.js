@@ -89,6 +89,18 @@ if (connectVideo && "IntersectionObserver" in window) {
 
 // Contact form validation
 const contactForm = document.getElementById("contactForm");
+const connectCard = document.getElementById("connectCard");
+const connectCardButton = document.querySelector(".connect-card-button");
+
+if (contactForm && connectCard && connectCardButton) {
+  connectCardButton.addEventListener("click", () => {
+    connectCard.hidden = true;
+    contactForm.hidden = false;
+    contactForm.scrollIntoView({ behavior: "smooth", block: "center" });
+    document.getElementById("name").focus({ preventScroll: true });
+  });
+}
+
 if (contactForm) {
   const isSv = document.documentElement.lang === "sv";
   const msgs = isSv

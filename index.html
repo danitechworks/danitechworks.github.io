@@ -479,6 +479,7 @@
             action="https://api.web3forms.com/submit"
             method="POST"
             novalidate
+            hidden
           >
             <h3 class="contact-h3">Send Email</h3>
 
@@ -529,8 +530,7 @@
               Submit Form
             </button>
           </form>
-          <aside class="connect-div" aria-labelledby="connect-heading">
-            <h3 class="connect-h3" id="connect-heading">Let&apos;s Connect</h3>
+          <aside class="connect-div" id="connectCard" aria-label="Contact invitation">
             <video
               class="connect-video"
               muted
@@ -541,6 +541,13 @@
             >
               <source src="videos/lets-connect.mp4" type="video/mp4" />
             </video>
+            <button
+              class="connect-card-button"
+              type="button"
+              aria-controls="contactForm"
+            >
+              Contact Me
+            </button>
           </aside>
         </div>
       </section>
