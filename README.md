@@ -54,6 +54,9 @@ The layout adapts to multiple screen sizes using CSS Grid and media queries:
 
 ## Performance Notes
 
+- Both languages preload the lossless WebP portrait with high fetch priority; the original PNG remains the fallback and social sharing image.
+- The hero background uses a 2560 × 1440 WebP (about 42 KB), with the original JPEG as a browser compatibility fallback. Together the WebP hero images are about 84% smaller than the originals.
+- Project screenshots load lazily, and project videos download when hover playback starts instead of on initial page load.
 - Background images for the knowledge section are media-query-gated so mobile and tablet devices only download the image they need
 - Google Fonts limited to JetBrains Mono and Space Grotesk (2 families, narrow weight ranges)
 

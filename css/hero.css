@@ -7,6 +7,10 @@
   padding-left: clamp(16px, 4vw, 64px);
 
   background-image: url("../images/background3.jpg");
+  background-image: image-set(
+    url("../images/background3.webp") type("image/webp"),
+    url("../images/background3.jpg") type("image/jpeg")
+  );
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

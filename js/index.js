@@ -2,7 +2,6 @@
 document.querySelectorAll(".projects-card").forEach((card) => {
   const video = card.querySelector(".hover-video");
   if (video) {
-    video.load();
     card.addEventListener("mouseenter", () => {
       video.play().catch(() => {});
     });
