@@ -23,6 +23,22 @@
   padding-top: 12px;
 }
 
+.footer-portrait-frame {
+  position: relative;
+  width: 132px;
+  height: 158px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.footer-portrait {
+  display: block;
+  width: 132px;
+  height: 176px;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .footer-link span {
   overflow-wrap: anywhere;
 }
@@ -93,5 +109,9 @@
 
   .footer-column:last-child {
     padding-top: 0;
+  }
+
+  .footer-portrait-column {
+    padding: 8px 0;
   }
 }
