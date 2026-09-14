@@ -1,10 +1,10 @@
 .connect-video {
   width: 100%;
   max-width: none;
-  aspect-ratio: 3 / 2;
-  height: auto;
+  height: 100%;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center top;
   background-color: var(--bg);
 }
 
@@ -35,7 +35,7 @@
 @media (hover: none) {
   .connect-card-button {
     align-items: flex-end;
-    padding-bottom: 2px;
+    padding-bottom: 0;
     background: linear-gradient(transparent 45%, rgba(0, 9, 13, 0.84));
     opacity: 1;
   }

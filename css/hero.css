@@ -140,7 +140,10 @@
   }
 
   .hero-video {
-    object-position: center top;
+    aspect-ratio: 3 / 2.81;
+    height: calc(93.63vw - 30px);
+    object-fit: cover;
+    object-position: left top;
   }
 
   .hero-scrim {
@@ -152,6 +155,10 @@
     margin-top: 20px;
   }
 
+  .hero-copy {
+    text-align: center;
+  }
+
   .hero-h1 {
     font-size: clamp(2.65rem, 13vw, 4rem);
     letter-spacing: 3px;
@@ -159,6 +166,8 @@
 
   .hero-summary {
     margin-top: 12px;
+    margin-right: auto;
+    margin-left: auto;
     font-size: 0.875rem;
   }
 
