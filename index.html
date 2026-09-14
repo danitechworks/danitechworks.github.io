@@ -146,23 +146,19 @@
     <!-- hero section -->
     <main>
       <section class="hero" id="hero">
-        <div class="hero-layout">
-          <div class="container">
-            <div class="hero-divImg">
-              <picture>
-                <source srcset="images/dani4.webp" type="image/webp" />
-                <img src="images/dani4.png" alt="Portrait of Dannell Bayer" width="433" height="577" fetchpriority="high" />
-              </picture>
-            </div>
-            <div class="text">
+        <video class="hero-video" muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="videos/heroanimation.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-scrim" aria-hidden="true"></div>
+        <div class="hero-overlay">
+          <div class="hero-copy">
+            <h1 class="hero-h1">Dannell Bayer</h1>
+            <p class="hero-p">.NET Student</p>
+            <p class="hero-summary">
               Growing as a .NET developer with a focus on C#, OOP, clean code,
               and reliable, user-focused software. Seeking a LIA placement from
               March-May and August-November 2027.
-            </div>
-          </div>
-          <div class="hero-div">
-            <h1 class="hero-h1">Dannell Bayer</h1>
-            <p class="hero-p">.NET Student</p>
+            </p>
             <a href="#contact" class="hero-btn">Contact Me</a>
           </div>
         </div>

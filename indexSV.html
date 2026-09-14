@@ -143,23 +143,19 @@
     <!-- hero section -->
     <main>
       <section class="hero" id="hero">
-        <div class="hero-layout">
-          <div class="container">
-            <div class="hero-divImg">
-              <picture>
-                <source srcset="images/dani4.webp" type="image/webp" />
-                <img src="images/dani4.png" alt="Porträtt av Dannell Bayer" width="433" height="577" fetchpriority="high" />
-              </picture>
-            </div>
-            <div class="text">
+        <video class="hero-video" muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="videos/heroanimation.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-scrim" aria-hidden="true"></div>
+        <div class="hero-overlay">
+          <div class="hero-copy">
+            <h1 class="hero-h1">Dannell Bayer</h1>
+            <p class="hero-p">.NET-student</p>
+            <p class="hero-summary">
               Utvecklas som .NET-utvecklare med fokus på C#, OOP, clean code och
               tillförlitlig, användarfokuserad mjukvara. Söker LIA-plats från
               mars-maj och augusti-november 2027.
-            </div>
-          </div>
-          <div class="hero-div">
-            <h1 class="hero-h1">Dannell Bayer</h1>
-            <p class="hero-p">.NET-student</p>
+            </p>
             <a href="#contact" class="hero-btn">Kontakta mig</a>
           </div>
         </div>

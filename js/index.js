@@ -62,30 +62,33 @@ if (section && "IntersectionObserver" in window) {
   type();
 }
 
-// Play the contact animation only while it is visible on screen.
-const connectVideo = document.querySelector(".connect-video");
-if (connectVideo && "IntersectionObserver" in window) {
-  let isOnScreen = false;
+// Play decorative videos only while their section and browser tab are visible.
+function playWhenVisible(video, threshold = 0.25) {
+  if (!video || !("IntersectionObserver" in window)) return;
 
-  const updateConnectVideo = () => {
+  let isOnScreen = false;
+  const updateVideo = () => {
     if (isOnScreen && !document.hidden) {
-      connectVideo.play().catch(() => {});
+      video.play().catch(() => {});
     } else {
-      connectVideo.pause();
+      video.pause();
     }
   };
 
-  const videoObserver = new IntersectionObserver(
+  const observer = new IntersectionObserver(
     ([entry]) => {
       isOnScreen = entry.isIntersecting;
-      updateConnectVideo();
+      updateVideo();
     },
-    { threshold: 0.25 },
+    { threshold },
   );
 
-  videoObserver.observe(connectVideo);
-  document.addEventListener("visibilitychange", updateConnectVideo);
+  observer.observe(video);
+  document.addEventListener("visibilitychange", updateVideo);
 }
+
+playWhenVisible(document.querySelector(".hero-video"), 0.1);
+playWhenVisible(document.querySelector(".connect-video"));
 
 // Contact form validation
 const contactForm = document.getElementById("contactForm");
